@@ -1,14 +1,22 @@
 \select@language {brazil}
-\contentsline {chapter}{\numberline {1}\MakeUppercase {Introdu\c {c}\~ao}}{10}
-\contentsline {section}{\numberline {1.1}\MakeUppercase {Motiva\c {c}\~ao}}{10}
-\contentsline {section}{\numberline {1.2}\MakeUppercase {Objetivos}}{10}
+\contentsline {chapter}{\numberline {1}\MakeUppercase {Introdu\IeC {\c c}\IeC {\~a}o}}{10}
+\contentsline {section}{\numberline {1.1}\MakeUppercase {Motiva\IeC {\c c}\IeC {\~a}o}}{10}
+\contentsline {section}{\numberline {1.2}\MakeUppercase {Objetivo}}{10}
 \contentsline {subsection}{\numberline {1.2.1}Objetivo Geral}{10}
-\contentsline {subsection}{\numberline {1.2.2}Objetivos Espec\'ificos}{11}
-\contentsline {chapter}{\numberline {2}\MakeUppercase {Desenvolvimento}}{12}
-\contentsline {section}{\numberline {2.1}\MakeUppercase {Figuras}}{12}
-\contentsline {section}{\numberline {2.2}\MakeUppercase {Tabelas}}{12}
-\contentsline {section}{\numberline {2.3}\MakeUppercase {Equa\c {c}\~oes}}{13}
-\contentsline {section}{\numberline {2.4}\MakeUppercase {Siglas e s\'imbolos}}{13}
-\contentsline {chapter}{\numberline {3}\MakeUppercase {Conclus\~ao}}{14}
-\contentsline {chapter}{Ap\^endice{} A{} -$\tmspace -\thinmuskip {.1667em}$-{} \MakeUppercase {Nome do Ap\^endice}}{15}
-\contentsline {chapter}{Anexo{} A{} -$\tmspace -\thinmuskip {.1667em}$-{} \MakeUppercase {Nome do Anexo}}{16}
+\contentsline {subsection}{\numberline {1.2.2}Objetivos Espec\IeC {\'\i }ficos}{10}
+\contentsline {section}{\numberline {1.3}\MakeUppercase {Metodologia}}{10}
+\contentsline {chapter}{\numberline {2}\MakeUppercase {Fundamentos te\IeC {\'o}ricos}}{11}
+\contentsline {section}{\numberline {2.1}\MakeUppercase {Plataforma Ardu\IeC {\'\i }no}}{11}
+\contentsline {section}{\numberline {2.2}\MakeUppercase {B\IeC {\'u}ssola}}{11}
+\contentsline {section}{\numberline {2.3}\MakeUppercase {CMUCam3}}{11}
+\contentsline {section}{\numberline {2.4}\MakeUppercase {Processamento de Imagem}}{11}
+\contentsline {section}{\numberline {2.5}\MakeUppercase {Mapa Cognitivo}}{11}
+\contentsline {section}{\numberline {2.6}\MakeUppercase {Tomada de Decis\IeC {\~a}o}}{11}
+\contentsline {chapter}{\numberline {3}\MakeUppercase {Desenvolvimento do Projeto}}{12}
+\contentsline {section}{\numberline {3.1}\MakeUppercase {Projeto Mec\IeC {\^a}nico}}{12}
+\contentsline {section}{\numberline {3.2}\MakeUppercase {Integra\IeC {\c c}\IeC {\~a}o com a b\IeC {\'u}ssola}}{12}
+\contentsline {section}{\numberline {3.3}\MakeUppercase {Interface Ardu\IeC {\'\i }no-CMUCam}}{12}
+\contentsline {section}{\numberline {3.4}\MakeUppercase {Algoritmo de Decis\IeC {\~a}o}}{12}
+\contentsline {chapter}{\numberline {4}\MakeUppercase {Problemas Encontrados}}{13}
+\contentsline {chapter}{\numberline {5}\MakeUppercase {Conclus\IeC {\~a}o}}{14}
+\contentsline {chapter}{Ap\^endice{} A{} -$\tmspace -\thinmuskip {.1667em}$-{} \MakeUppercase {Caderno de Bordo}}{15}

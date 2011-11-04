@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.23)  3 NOV 2011 10:57
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.23)  4 NOV 2011 09:53
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -630,7 +630,7 @@ Underfull \hbox (badness 6876) in paragraph at lines 63--63
 
 ]
 Overfull \hbox (4.33916pt too wide) in paragraph at lines 88--88
-\OT1/ptm/m/n/12 EX-PLO-RADOR DE AM-BI-ENTES. 16[] f. Mono-grafia -- De-par-ta-m
+\OT1/ptm/m/n/12 EX-PLO-RADOR DE AM-BI-ENTES. 15[] f. Mono-grafia -- De-par-ta-m
 ento Acad[]emico de Eletr[]onica,
  []
 
@@ -674,195 +674,50 @@ ento Acad[]emico de Eletr[]onica,
 
 ]
 Cap\'{\i }tulo 1.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 118.
-
-(/usr/share/texmf-texlive/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
-
-LaTeX Warning: Citation `abnTeX2009' on page 10 undefined on input line 118.
+[10
 
 
-LaTeX Warning: Citation `LaTeX2009' on page 10 undefined on input line 120.
-
-
-LaTeX Warning: Citation `BibTeX2009' on page 10 undefined on input line 120.
-
-
-LaTeX Warning: Citation `Lamport1986' on page 10 undefined on input line 120.
-
-
-LaTeX Warning: Citation `Buerger1989' on page 10 undefined on input line 120.
-
-
-LaTeX Warning: Citation `Kopka2003' on page 10 undefined on input line 120.
-
-
-LaTeX Warning: Citation `Mittelbach2004' on page 10 undefined on input line 120
-.
-
-
-Overfull \hbox (35.3278pt too wide) in paragraph at lines 120--121
-\OT1/ptm/m/n/12 aconselha-se que o po-ten-cial usu[]ario analise os co-man-dos 
-ex-is-tentes no ar-quivo T[]X (\OT1/pcr/m/n/12 modelo[]*.tex\OT1/ptm/m/n/12 )
- []
-
-
-Overfull \hbox (6.14827pt too wide) in paragraph at lines 124--125
-[]\OT1/ptm/m/n/12 Uma das prin-ci-pais van-ta-gens do uso do es-tilo de formata
-[][]ao \OT1/pcr/m/n/12 normas-utf-tex.cls
- []
-
-
-LaTeX Warning: Citation `UTFPR2008' on page 10 undefined on input line 130.
-
-
-LaTeX Warning: Citation `DAELN2006' on page 10 undefined on input line 130.
-
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 135.
-
-(/usr/share/texmf-texlive/tex/latex/psnfss/omsptm.fd
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 135.
- [10
-
-
-] [11]
+]
 Cap\'{\i }tulo 2.
-LaTeX Font Info:    Try loading font information for OMS+pcr on input line 145.
+[11
 
-(/usr/share/texmf-texlive/tex/latex/psnfss/omspcr.fd
-File: omspcr.fd 
-)
-LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 145.
-
-
-LaTeX Warning: Citation `Goossens2007' on page 12 undefined on input line 149.
-
-<./dummy.png, id=45, 301.125pt x 301.125pt>
-File: ./dummy.png Graphic file (type png)
- <use ./dummy.png>
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 155.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 155.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 155.
-
-
-LaTeX Warning: Citation `abnTeX2009' on page 12 undefined on input line 156.
-
-
-LaTeX Warning: Citation `Lamport1986' on page 12 undefined on input line 163.
-
-
-LaTeX Warning: Citation `Buerger1989' on page 12 undefined on input line 163.
-
-
-LaTeX Warning: Citation `Kopka2003' on page 12 undefined on input line 163.
-
-
-LaTeX Warning: Citation `Mittelbach2004' on page 12 undefined on input line 163
-.
-
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 184.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 184.
+]
+Cap\'{\i }tulo 3.
 [12
 
- <./dummy.png>]
+]
+Cap\'{\i }tulo 4.
+[13
 
-LaTeX Warning: Citation `abnTeX2009' on page 13 undefined on input line 198.
-
-[13]
-Cap\'{\i }tulo 3.
-
-LaTeX Warning: Citation `CTAN2009' on page 14 undefined on input line 204.
-
-
-LaTeX Warning: Citation `TeX-Br2009' on page 14 undefined on input line 204.
-
-
-LaTeX Warning: Citation `Wikibooks2009' on page 14 undefined on input line 204.
-
-
-
-Overfull \hbox (3.1574pt too wide) in paragraph at lines 204--205
-[]\OT1/ptm/m/n/12 Espera-se que o uso do es-tilo de formata[][]ao L[]T[]X ad-e-
-quado []as Nor-mas para Elabora[][]ao
- []
-
-
-LaTeX Warning: Citation `TeXnicCenter2009' on page 14 undefined on input line 2
-06.
-
-
-LaTeX Warning: Citation `MiKTeX2009' on page 14 undefined on input line 206.
-
-
-Overfull \hbox (4.29355pt too wide) in paragraph at lines 206--207
-\OT1/ptm/m/n/12 em L[]T[]X para usu[]arios Linux. Para usu[]arios Win-dows reco
-menda-se o ed-i-tor T[]XnicCenter (\OT1/ptm/b/n/12 ??\OT1/ptm/m/n/12 ).
- []
-
-
-LaTeX Warning: Citation `JabRef2009' on page 14 undefined on input line 208.
-
-
-LaTeX Warning: Citation `Mendeley2009' on page 14 undefined on input line 208.
-
+]
+Cap\'{\i }tulo 5.
 No file monografia.bbl.
 [14
 
 ]
 Apendice A.
-[15
-
-]
-Anexo A.
-
-Overfull \hbox (1.94882pt too wide) in paragraph at lines 229--231
-[]\OT1/ptm/m/n/12 Use o co-mando \OMS/cmsy/m/n/12 n\OT1/pcr/m/n/12 anexo \OT1/p
-tm/m/n/12 e de-pois co-man-dos \OMS/cmsy/m/n/12 n\OT1/pcr/m/n/12 chapter\OMS/cm
-sy/m/n/12 fg \OT1/ptm/m/n/12 para gerar t[]^^Ptulos de anexos. 
- []
-
-AED: lastpage setting LastPage [16
+AED: lastpage setting LastPage [15
 
 ]
 +-------------------------------------------------------------------+
 | Comentario, sugestao ou critica sobre o abnTeX? Entre em contato: |
 |                  http://abntex.codigolivre.org.br                 |
 +-------------------------------------------------------------------+
-(./monografia.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+(./monografia.aux) ) 
 Here is how much of TeX's memory you used:
- 3699 strings out of 495061
- 48210 string characters out of 1182620
- 108412 words of memory out of 3000000
- 6710 multiletter control sequences out of 15000+50000
- 51588 words of font info for 117 fonts, out of 3000000 for 9000
+ 3506 strings out of 495061
+ 45401 string characters out of 1182620
+ 107367 words of memory out of 3000000
+ 6551 multiletter control sequences out of 15000+50000
+ 20780 words of font info for 48 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 36i,8n,43p,892b,293s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
-ve/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/ty
-pe1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/public/
-amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
-cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/urw/courier/ucrr8a.pfb></usr/s
-hare/texmf-texlive/fonts/type1/urw/symbol/usyr.pfb></usr/share/texmf-texlive/fo
-nts/type1/urw/symbol/usyr.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/u
-tmb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/shar
-e/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on monografia.pdf (17 pages, 122948 bytes).
+ 36i,8n,43p,283b,228s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr
+/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive
+/fonts/type1/urw/times/utmr8a.pfb>
+Output written on monografia.pdf (16 pages, 45422 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
+ 63 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
