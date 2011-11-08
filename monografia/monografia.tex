@@ -97,8 +97,8 @@ Abstract text (maximum of 500 words).
 % listas (opcionais, mas recomenda-se a partir de 5 elementos)
 \listadefiguras % geracao automatica da lista de figuras
 \listadetabelas % geracao automatica da lista de tabelas
-\listadesiglas % geracao automatica da lista de siglas
-\listadesimbolos % geracao automatica da lista de simbolos
+%\listadesiglas % geracao automatica da lista de siglas
+%\listadesimbolos % geracao automatica da lista de simbolos
 
 % sumario
 \sumario % geracao automatica do sumario
@@ -112,55 +112,44 @@ Abstract text (maximum of 500 words).
 %\input{concl.tex}
 
 
-%---------- Primeiro Capitulo ----------
-\chapter{Introdução}
+% ========== %
+% INTRODUÇÃO %
+% ========== %
 
-\section{Motivação}
+\include{introducao}
 
-\section{Objetivo}
+% ================ %
+% SISTEMA MECÂNICO %
+% ================ %
 
-\subsection{Objetivo Geral}
+\include{sistemamecanico}
 
-\subsection{Objetivos Específicos}
+% ======== %
+% SENSORES %
+% ======== %
 
-\section{Metodologia}
+\include{sensores}
 
-%---------- Segundo Capitulo ----------
-\chapter{Fundamentos teóricos}
+% ===== %
+% VISÃO %
+% ===== %
 
-\section{Plataforma Arduíno}
+\include{visao}
 
-\section{Bússola}
+% ========= %
+% NAVEGAÇÃO %
+% ========= %
 
-\section{CMUCam3}
+\include{navegacao}
 
-\section{Processamento de Imagem}
+% ========= %
+% CONCLUSÃO %
+% ========= %
 
-\section{Mapa Cognitivo}
-
-\section{Tomada de Decisão}
-
-
-%---------- Terceiro Capitulo ----------
-\chapter{Desenvolvimento do Projeto}
-
-\section{Projeto Mecânico}
-
-\section{Integração com a bússola}
-
-\section{Interface Arduíno-CMUCam}
-
-\section{Algoritmo de Decisão}
-
-%---------- Quarto Capitulo ----------
-\chapter{Problemas Encontrados}
-
-%---------- Quinto Capitulo ----------
-\chapter{Conclusão}
+\include{conclusao}
 
 %---------- Referencias ----------
 \bibliography{reflatex} % geracao automatica das referencias a partir do arquivo reflatex.bib
-
 
 %---------- Apendices (opcionais) ----------
 \apendice
