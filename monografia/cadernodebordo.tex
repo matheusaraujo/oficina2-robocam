@@ -1,0 +1,108 @@
+\chapter{Caderno de Bordo}
+
+\textbf{10 de Agosto}
+
+Primeira aula da disciplina. 
+
+\textbf{17 de Agosto}
+
+Marcelo Teider e Matheus Araujo decidem formar a equipe, têm em mente o projeto de um robô explorador. A equipe ainda não tem os três integrantes, como sugerido para a Disciplina. Então iniciam-se negociações com outras equipes para a definição dos integrantes.
+
+\textbf{12 de Agosto}
+
+
+Após algumas conversas, as equipes da disciplina são definidas. Luis Camargo é integrado à equipe. 
+
+\textbf{13 de Agosto}
+
+Após a definição da equipe, a professora Myriam Delgado é convidada para nos orientar, aceitando a proposta. 
+
+\textbf{13 de Agosto}
+
+O projeto é então definido como a construção de um robô explorador. A intenção é “mostrar” ao robô um objeto para reconhecimento, então esse mesmo objeto é escondido de seu campo de visão e o robô deve então explorar o ambiente procurando-o. Ele deve também evitar obstáculos durante o percurso.
+
+\textbf{24 de Agosto}
+
+Apresentação da pré-proposta. A equipe apresentou aos professores da disciplina a pré-proposta de projeto, sendo aceita pelos professores. Como sugerido pelo professor Hugo durante a apresentação, decidimos comprar uma \textit{SmartCam}. A primeira ideia seria utilizar a \textit{CMUcam}, mas optamos por pesquisar outros modelos. 
+
+\textbf{29/30 de Agosto}
+
+Iniciamos as pesquisas das câmeras. Pesquisamos os modelos \textit{AVRcam}, que não está sendo produzido no momento; e alguns modelos comerciais, que foram descartados devido ao elevado custo, acima de US\$ 2000,00. Dentre os modelos \textit{CMUcam}, ficamos em dúvida entre dois modelos, \textit{CMUcam1 }e \textit{CMUcam2}. 
+
+Fizemos um levantamento do material que será necessário para a construção do robô, como motor, chassi, bateria e microprocessador. 
+
+\textbf{31 de Agosto}
+
+Em conversa com o professor Hugo, optamos pela \textit{CMUcam1}; uma vez que ela atende os requisitos do projeto e tem menor custo. Os procedimentos para adquirá-la foram tomados.
+
+Conseguimos com a equipe que desenvolveu o Robô Explorador de Labirintos 2D nessa mesma disciplina, em 2011-01, o robô emprestado. Segundo a Equipe, uma das Pontes H do robô apresenta problemas, precisaremos solucioná-lo. 
+
+Precisamos agora decidir e conseguir o microcontrolador para o Robô. Os da plataforma \textit{Arduíno} apresentam possibilidade de comunicação com a câmera via software e pela familiaridade dos membros da equipe podem se tornar uma boa escolha.
+
+\textbf{5 de Setembro}
+
+Pegamos o robô com a equipe do semestre passado. Sem problemas com a ponte H, o robô não apresenta nenhum problema mecânico ou elétrico-eletrônico. Estamos utilizando o mesmo microcontrolador da equipe, um \textit{ATMEGA 328P} em  uma placa \textit{Arduíno Duemilanove}. 
+
+\textbf{ 7 de Setembro}
+
+Desenvolvemos uma API para controle do hardware do Robô. Fizemos uma classe \textit{Robot} em C++ com funções pré-definidas como \textit{startrobot}, \textit{forward}, \textit{turnleft}. No código a ser desenvolvido não necessitaremos controlar o robô diretamente, apenas através dessa classe.
+
+\textbf{12 de Setembro}
+
+Por indicação de nossa orientadora, conhecemos o trabalho \textit{A Distributed Cognitive Map for Spatial Navigation Based on Graphically Organized Place Agents}, de Jörg Conradt e Rodney Douglas, e por orientação do professor Luiz Merkle com um algoritmo de busca recursiva em um espaço bidimensional pelas quatro direções cardeais através de pilha, no livro \textit{Data Structures - An advanced approach using C}.
+
+\textbf{21 de Setembro}
+
+Definida a data da banca final, 7 de Dezembro. 
+
+Por orientação do professor Hugo, entramos em contato com diversos artigos de Prestes, Lowe, Bay e Artolazabal.
+
+\textbf{23 a 28 de Setembro}
+
+Escrita do relatório de Qualificação, entregue aos professores no dia 28. Percebemos a necessidade de usar uma bússola como sensor para definir a direção em que se encontra o robô.
+
+\textbf{28 de Setembro}
+
+Entrega da Qualificação aos professores da Disciplina. Conseguimos emprestado com o professor Hugo duas bússolas \textit{Dinsmore}, uma digital e outra analógica. Durante a próxima semana faremos os testes para definir qual iremos usar. A bússola será integrada ao sistema através da placa do \textit{Arduíno}.
+
+\textbf{30 de Setembro}
+
+Foram encontrados problemas com o interfaceamento entre a bússola e o arduíno devido a diferentes níveis de tensão e corrente, será necessário construir um conversor DC-DC para fazer a integração.
+
+\textbf{6 de Outubro}
+
+Após orientação do professor Hugo e pesquisa de outros projetos, fizemos o primeiro experimento com a bússola e obtivemos 5 [V] na saída, o que possibilita interfaceamento direto com o arduíno. 
+
+\textbf{12 de Outubro}
+
+Construímos um \textit{shield} para a bússola, possibilitando conectá-la ao Arduíno.
+
+\textbf{14 de Outubro}
+
+A câmera foi finalmente enviada de Hong Kong. A previsão de entrega é de um mês, precisamos elaborar um plano B caso a câmera não chegue a tempo da finalização do projeto.
+
+\textbf{15 de Outubro}
+
+Conectamos o \textit{shield} da bússola ao Arduíno; tivemos alguns problemas de mau contato com os cabos, mas o robô é capaz de interpretar as informações fornecidas pela bússola e segue os comandos que lhe foram dados. 
+
+\textbf{18 de Outubro}
+
+Tivemos uma reunião com nossa orientadora, Prof. Myriam, onde apresentamos o estado atual do projeto e elaboramos um segundo plano, caso a câmera não chegue. Iremos utilizar os sensores do projeto passado, cinco pares de leds emissor/receptor, e construir uma pasta com marcas de diferentes cores perceptíveis pelo robô, onde ele deverá construir um mapa cognitivo. 
+
+\textbf{19 de Outubro}
+
+A câmera chegou! Iremos começar os testes com ela em breve. Precisaremos de um cabo serial ou um adaptador para comunicação com a placa e também de baterias para alimentação da mesa, 6V.
+
+\textbf{26 de Outubro}
+
+Compramos um adaptador para o cabo de comunicação e um suporte para quatro pilhas AA que servirá como alimentação.
+
+Conseguimos compilar e gravar os códigos de exemplo na câmera.
+
+\textbf{2 de Novembro}
+
+Estamos estudando a comunicação da \textit{CMUCam} com o \textit{Arduíno}.
+
+\textbf{9 de Novembro}
+
+Concentramos nossas atenções na finalização da primeira versão da monografia.
