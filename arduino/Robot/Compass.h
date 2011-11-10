@@ -11,4 +11,5 @@ class Compass{
 	public:
 		Compass();
 		int orientation();
+
 };

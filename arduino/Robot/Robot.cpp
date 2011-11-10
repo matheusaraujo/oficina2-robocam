@@ -22,7 +22,7 @@ Robot::Robot(){
     pinMode(_LED_L, OUTPUT);
     pinMode(_LED_R, OUTPUT);
 
-	spin_tolerance = 1500;
+	spin_tolerance = 1;
 }
 
 void Robot::setled(bool left, bool right){
@@ -30,7 +30,7 @@ void Robot::setled(bool left, bool right){
     digitalWrite(_LED_R, right ? HIGH : LOW);
 }
 
-void Robot::setmotor(bool m1p1, bool m1p2, bool m2p1, bool m2p2){
+void Robot::setmotor(bool m1p1, bool m1p2, bool m2p1, bool m2p2, int pwm1, int pwm2){
 
     // proteção do motor, dois 1 na mesma ponte H dá zica
     if ((m1p1 && m1p2) || (m2p1 && m2p2))
@@ -45,10 +45,15 @@ void Robot::setmotor(bool m1p1, bool m1p2, bool m2p1, bool m2p2){
     digitalWrite(_MOTOR1_PIN2, m1p2 ? HIGH : LOW);
     digitalWrite(_MOTOR2_PIN1, m2p1 ? HIGH : LOW);
     digitalWrite(_MOTOR2_PIN2, m2p2 ? HIGH : LOW); */
-	analogWrite(_MOTOR1_PIN1, m1p1 ? 127 : 0);
-	analogWrite(_MOTOR1_PIN2, m1p2 ? 127 : 0);
-	analogWrite(_MOTOR2_PIN1, m2p1 ? 127 : 0);
-	analogWrite(_MOTOR2_PIN2, m2p2 ? 127 : 0);
+	analogWrite(_MOTOR1_PIN1, m1p1 ? 255 * pwm1 / 100 : 0);
+	analogWrite(_MOTOR1_PIN2, m1p2 ? 255 * pwm1 / 100 : 0);
+	analogWrite(_MOTOR2_PIN1, m2p1 ? 255 * pwm2 / 100 : 0);
+	analogWrite(_MOTOR2_PIN2, m2p2 ? 255 * pwm2 / 100 : 0);
+	
+}
+
+void Robot::setmotor(bool m1p1, bool m1p2, bool m2p1, bool m2p2){
+    setmotor(m1p1, m1p2, m2p1, m2p2, 50, 50);
 }
 
 void Robot::start(){
@@ -132,6 +137,14 @@ void Robot::forward(int tdelay){
     stop();
 }
 
+void Robot::adjustleft(){
+    setmotor(true, false, true, false, 40, 60);
+}
+
+void Robot::adjustright(){
+    setmotor(true, false, true, false, 60, 40);
+}
+
 void Robot::backward(){
     setled(true, true);
     setmotor(false, true, false, true);
@@ -167,7 +180,7 @@ void Robot::turnright(int tdelay){
 
 void Robot::spinleft(){
 	setled(true, false);
-	setmotor(true, false, false, true);
+	setmotor(false, true, true, false);
 }
 
 void Robot::spinleft(int tdelay){
@@ -178,7 +191,7 @@ void Robot::spinleft(int tdelay){
 
 void Robot::spinright(){
 	setled(false, true);
-	setmotor(true, false, true, false);
+	setmotor(true, false, false, true);
 }
 
 void Robot::spinright(int tdelay){
@@ -203,14 +216,16 @@ void Robot::forcestop(){
 void Robot::test(){
 	int oo = compass.orientation();
 	int o = oo;
-	int c = 0;
-	int t = 50;
-	spinleft();
-	while(c < spin_tolerance){
+		
+	forward();
+	
+	while(o == oo){
 		o = compass.orientation();
-		if (o != oo) c++;
-		else c = 0;
 	}
 
 	stop();
+}
+
+int Robot::orientation(){
+    return compass.orientation();
 }

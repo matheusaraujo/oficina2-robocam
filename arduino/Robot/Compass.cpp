@@ -16,5 +16,5 @@ Compass::Compass(){
 }
 
 int Compass::orientation(){
-	return digitalRead(_PIN1) + 2 * digitalRead(_PIN2) + 4 * digitalRead(_PIN3) + digitalRead(_PIN4);
+	return digitalRead(_PIN1) + 2 * digitalRead(_PIN2) + 4 * digitalRead(_PIN3) + 8 * digitalRead(_PIN4);
 }

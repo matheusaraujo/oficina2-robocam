@@ -3,6 +3,8 @@
 #include "WProgram.h"
 #include "pitches.h"
 #include "Compass.h"
+#include "CommSerial.h"
+#include "/usr/include/Constants.h"
 
 /*
     PINAGEM DO ARDUÍNO:
@@ -12,7 +14,7 @@
     MOTOR DIREITO, TRÁS: 10 M2P2
     LED ESQUERDO: PINO 2
     LED DIREITO: PINO 4
-    SPEKAR: PINO 8
+    SPEAKER: PINO 8
 */
 
 class Robot
@@ -20,13 +22,14 @@ class Robot
     private:
         void setled(bool left, bool right);        
         void setmotor(bool m1p1, bool m1p2, bool m2p1, bool m2p2);
-        char _MOTOR1_PIN1;
-        char _MOTOR1_PIN2;
-        char _MOTOR2_PIN1;
-        char _MOTOR2_PIN2;
-        char _LED_L;
-        char _LED_R;
-        char _SPEAKER;
+        void setmotor(bool m1p1, bool m1p2, bool m2p1, bool m2p2, int pwm1, int pwm2);
+        byte _MOTOR1_PIN1;
+        byte _MOTOR1_PIN2;
+        byte _MOTOR2_PIN1;
+        byte _MOTOR2_PIN2;
+        byte _LED_L;
+        byte _LED_R;
+        byte _SPEAKER;
         bool _m1p1;
         bool _m1p2;
         bool _m2p1;
@@ -40,6 +43,8 @@ class Robot
         void playsound(int melody[], int duration[], int length);        
         void forward();
         void forward(int tdelay);
+        void adjustleft();
+        void adjustright();
         void backward();
         void backward(int tdelay);
         void turnleft();
@@ -51,6 +56,7 @@ class Robot
 		void spinright();
 		void spinright(int tdelay);
         void stop();
-        void forcestop();
+        void forcestop();	
 		void test();
+		int orientation();
 };

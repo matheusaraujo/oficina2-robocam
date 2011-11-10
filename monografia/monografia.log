@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.23)  4 NOV 2011 09:53
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.23)  9 NOV 2011 10:13
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -544,7 +544,9 @@ File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
 )
 (/usr/share/texmf-texlive/tex/latex/psnfss/times.sty
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
-) (./monografia.aux)
+) (./monografia.aux
+(./introducao.aux) (./sistemamecanico.aux) (./sensores.aux) (./visao.aux)
+(./navegacao.aux) (./conclusao.aux))
 \openout1 = `monografia.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
@@ -630,7 +632,7 @@ Underfull \hbox (badness 6876) in paragraph at lines 63--63
 
 ]
 Overfull \hbox (4.33916pt too wide) in paragraph at lines 88--88
-\OT1/ptm/m/n/12 EX-PLO-RADOR DE AM-BI-ENTES. 15[] f. Mono-grafia -- De-par-ta-m
+\OT1/ptm/m/n/12 EX-PLO-RADOR DE AM-BI-ENTES. 14[] f. Mono-grafia -- De-par-ta-m
 ento Acad[]emico de Eletr[]onica,
  []
 
@@ -652,72 +654,95 @@ ento Acad[]emico de Eletr[]onica,
 
  [5
 
-] (./monografia.lsg)
-\tf@lsg=\write5
-\openout5 = `monografia.lsg'.
+] (./monografia.toc)
+\tf@toc=\write5
+\openout5 = `monografia.toc'.
 
 
 [6
 
-] (./monografia.lsb)
-\tf@lsb=\write6
-\openout6 = `monografia.lsb'.
-
- [7
-
-] (./monografia.toc)
-\tf@toc=\write7
-\openout7 = `monografia.toc'.
-
- [8
-
 
 ]
+\openout2 = `introducao.aux'.
+
+ (./introducao.tex
 Cap\'{\i }tulo 1.
-[10
+) [8
+
 
 
 ]
+\openout2 = `sistemamecanico.aux'.
+
+ (./sistemamecanico.tex
 Cap\'{\i }tulo 2.
-[11
+) [9
+
+
 
 ]
+\openout2 = `sensores.aux'.
+
+ (./sensores.tex
 Cap\'{\i }tulo 3.
-[12
+) [10
+
+
 
 ]
+\openout2 = `visao.aux'.
+
+ (./visao.tex
 Cap\'{\i }tulo 4.
-[13
+) [11
+
+
 
 ]
+\openout2 = `navegacao.aux'.
+
+ (./navegacao.tex
 Cap\'{\i }tulo 5.
-No file monografia.bbl.
-[14
+) [12
+
+
 
 ]
+\openout2 = `conclusao.aux'.
+
+ (./conclusao.tex
+Cap\'{\i }tulo 6.
+) [13
+
+
+
+]
+No file monografia.bbl.
 Apendice A.
-AED: lastpage setting LastPage [15
+AED: lastpage setting LastPage [14
+
 
 ]
 +-------------------------------------------------------------------+
 | Comentario, sugestao ou critica sobre o abnTeX? Entre em contato: |
 |                  http://abntex.codigolivre.org.br                 |
 +-------------------------------------------------------------------+
-(./monografia.aux) ) 
+(./monografia.aux (./introducao.aux) (./sistemamecanico.aux) (./sensores.aux)
+(./visao.aux) (./navegacao.aux) (./conclusao.aux)) ) 
 Here is how much of TeX's memory you used:
- 3506 strings out of 495061
- 45401 string characters out of 1182620
- 107367 words of memory out of 3000000
- 6551 multiletter control sequences out of 15000+50000
+ 3546 strings out of 495061
+ 45967 string characters out of 1182620
+ 109160 words of memory out of 3000000
+ 6555 multiletter control sequences out of 15000+50000
  20780 words of font info for 48 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  36i,8n,43p,283b,228s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr
-/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive
-/fonts/type1/urw/times/utmr8a.pfb>
-Output written on monografia.pdf (16 pages, 45422 bytes).
+{/usr/share/texmf-texlive/f
+onts/enc/dvips/base/8r.enc}</usr/share/texmf-texlive/fonts/type1/urw/times/utmb
+8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb>
+Output written on monografia.pdf (15 pages, 45633 bytes).
 PDF statistics:
- 63 PDF objects out of 1000 (max. 8388607)
+ 60 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
