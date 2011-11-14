@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.11.11)  14 NOV 2011 00:13
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.11.11)  14 NOV 2011 03:55
 entering extended mode
  %&-line parsing enabled.
 **monografia
@@ -632,7 +632,7 @@ Underfull \hbox (badness 6876) in paragraph at lines 63--63
 
 ]
 Overfull \hbox (4.33916pt too wide) in paragraph at lines 88--88
-\OT1/ptm/m/n/12 EX-PLO-RADOR DE AM-BI-ENTES. 21[] f. Mono-grafia -- De-par-ta-m
+\OT1/ptm/m/n/12 EX-PLO-RADOR DE AM-BI-ENTES. 24[] f. Mono-grafia -- De-par-ta-m
 ento Acad[]emico de Eletr[]onica,
  []
 
@@ -682,7 +682,7 @@ Overfull \hbox (6.02739pt too wide) in paragraph at lines 7--8
  in-cluindo ro-das, caixa de redu[][]ao
  []
 
-<imagens/robo.png, id=32, 1038.88126pt x 716.6775pt>
+<imagens/robo.png, id=33, 1038.88126pt x 716.6775pt>
 File: imagens/robo.png Graphic file (type png)
  <use imagens/robo.png>
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
@@ -696,12 +696,29 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 
 
 
- <./imagens/robo.png (PNG copy)>] [10] [11]) [12]
+ <./imagens/robo.png (PNG copy)>] [10] [11]
+<imagens/processo_arduino.png, id=43, 828.09375pt x 273.02pt>
+File: imagens/processo_arduino.png Graphic file (type png)
+
+<use imagens/processo_arduino.png>
+Overfull \hbox (2.25935pt too wide) in paragraph at lines 90--91
+[]\OT1/ptm/m/n/12 O \OT1/ptm/m/it/12 Ardu[]^^Pno Duemi-lanove \OT1/ptm/m/n/12 p
+os-sui um mi-cro-pro-ces-sador \OT1/ptm/m/it/12 AT-MEGA328P\OT1/ptm/m/n/12 , su
+a programa[][]ao
+ []
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 113.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[12 <./imagens/processo_arduino.png (PNG copy)>] [13]) [14] [15]
 \openout2 = `sensores.aux'.
 
- (./sensores.tex
+
+(./sensores.tex
 Cap\'{\i }tulo 3.
-) [13
+) [16
 
 
 
@@ -710,7 +727,7 @@ Cap\'{\i }tulo 3.
 
  (./visao.tex
 Cap\'{\i }tulo 4.
-) [14
+) [17
 
 
 
@@ -719,7 +736,7 @@ Cap\'{\i }tulo 4.
 
  (./navegacao.tex
 Cap\'{\i }tulo 5.
-) [15
+) [18
 
 
 
@@ -728,11 +745,11 @@ Cap\'{\i }tulo 5.
 
  (./conclusao.tex
 Cap\'{\i }tulo 6.
-) [16
+) [19
 
 
 
-] (./monografia.bbl) [17
+] (./monografia.bbl) [20
 
 
 ]
@@ -740,7 +757,7 @@ Cap\'{\i }tulo 6.
 
  (./cadernodebordo.tex
 Apendice A.
-[18
+[21
 
 
 ]
@@ -755,7 +772,7 @@ Overfull \hbox (3.05124pt too wide) in paragraph at lines 58--59
 com di-ver-sos ar-ti-gos de Prestes,
  []
 
-[19] [20]) [21] AED: lastpage setting LastPage
+[22] [23]) [24] AED: lastpage setting LastPage
 +-------------------------------------------------------------------+
 | Comentario, sugestao ou critica sobre o abnTeX? Entre em contato: |
 |                  http://abntex.codigolivre.org.br                 |
@@ -763,20 +780,21 @@ com di-ver-sos ar-ti-gos de Prestes,
 (./monografia.aux (./introducao.aux) (./sistemamecanico.aux) (./sensores.aux)
 (./visao.aux) (./navegacao.aux) (./conclusao.aux) (./cadernodebordo.aux)) ) 
 Here is how much of TeX's memory you used:
- 3611 strings out of 495061
- 46953 string characters out of 1182620
- 112567 words of memory out of 3000000
- 6606 multiletter control sequences out of 15000+50000
- 32377 words of font info for 74 fonts, out of 3000000 for 9000
+ 3650 strings out of 495061
+ 47548 string characters out of 1182620
+ 116948 words of memory out of 3000000
+ 6642 multiletter control sequences out of 15000+50000
+ 34006 words of font info for 76 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 36i,9n,43p,479b,318s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,11n,43p,684b,318s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/us
 r/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texlive/fon
 ts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/u
-tmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on monografia.pdf (22 pages, 104657 bytes).
+tmbi8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/sha
+re/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
+Output written on monografia.pdf (25 pages, 135622 bytes).
 PDF statistics:
- 87 PDF objects out of 1000 (max. 8388607)
+ 102 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

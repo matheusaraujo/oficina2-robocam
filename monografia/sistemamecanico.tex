@@ -1,6 +1,6 @@
 \chapter{Sistema Mecânico}
 
-O robô utilizado no projeto é o mesmo robô construído durante o projeto \textbf{Robô Explorador de Labirintos 2D} \cite{RoboExplorador} desta mesma disciplina.
+O robô utilizado no projeto é o mesmo robô construído durante o projeto \textbf{Robô Explorador de Labirintos 2D} \cite{Robo2d} desta mesma disciplina.
 
 No projeto original o robô era utilizado para explorar e solucionar labirintos em duas dimensões feitos através de trilhas pretas em um chão branco, utilizado emissores e sensores de luz infravermelha para identificar a pista. 
 
@@ -37,6 +37,89 @@ LEDs e \textit{Speaker} usados para indicar as ações do robô.
 \subsubsection{LEDs}
 Usados para indicação dos estados do robô, detalhados na Tabela \ref{int_tbl01}
 
+\subsubsection{Speaker}
+Utilizado como indicador sonoro de estados específicos do sistema, como reconhecimento do objeto e início e fim da busca do mesmo.
+
+\subsection{Sistema de Tração}
+
+Para tração do robô foi construído um sistema baseado em um motor elétrico e duas rodas centrais.
+
+\subsubsection{Motores}
+Motor elétrico de corrente contínua \textit{Mabuchi FA-130RA} de 3V com rotação de 12300 rpm, ou 205 voltas por segundo \cite{Robo2d}
+
+\subsubsection{Caixas de redução}
+Acopladas ao motor e às rodas reduzem a rotação do motor para que seja possível acionar as rodas. Na configuração usada, a redução é de 344:1 \cite{Robo2d}.
+
+\subsubsection{Rodas}
+O robô utiliza duas rodas \textit{off-road} em seu centro e uma esfera com giro livre atrás para manter o equilíbrio.
+
+Com a rotação de 205 voltas/segundo e a redução de 344:1, a roda completa 0,6 voltas por segundo.
+
+\subsection{Sistema de Controle}
+
+Sistema para controle da movimentação do robô.
+
+\subsubsection{Ponte H} 
+
+A Ponte H é um circuito que permite a um microcontrolador acionar um motor de corrente contínua. Por questões eletrônicas \cite{Robo2d}, o circuito utilizado no projeto foi construído a partir de componentes discretos.
+
+\subsubsection{Arduíno Duemilanove}
+
+Placa \textit{Arduíno} utilizada no projeto anterior e reutilizada no projeto atual. Faz o interfaceamento dos diversos sistemas do projeto, \textit{i.e.}, recebe as decisões tomadas pelo Sistema de Navegação, embarcado na câmera, e aciona os motores para que o robô as execute. Seu funcionamento é detalhado na seção \ref{sec_arduino}.
+
+\subsubsection{Microcontrolador ATMEGA328P}
+
+Microcontolador presente da \textit{Arduíno Duemilanove}, os códigos construídos para controle do robô (Seção \ref{sec_soft_controle}) serão executados por ele.
+
+\section{Plataforma Arduíno}
+\label{sec_arduino}
+
+Arduíno é uma plataforma \textit{open-source} para prototipagem eletrônica que busca facilitar a construção de sistemas onde haja interação com objetos e o ambiente. \cite{arduino1}
+
+Para o projeto \textbf{Robô Explorador} foi utilizado uma placa \textit{Arduíno Duemilanove} que foi reutilizada no trabalho atual.
+
+Dentro do projeto, o \textit{Arduíno} exerce um papel central de receber, via comunicação serial, as decisões tomadas pelo Sistema de Exploração, embarcado na câmera, e atuar sobre os motores através da Ponte H. Além disso, ele recebe o sinal lido através da bússola e aciona os dispositivos de indicação. Esse processo é representado na Figura \ref{int_fig02}.
+
+\begin{figure}[h!]
+    \center
+    \includegraphics[scale=0.5]{imagens/processo_arduino.png}
+    \caption{Processo de Comunicação - Arduíno}
+    \label{int_fig02}
+\end{figure}
+
+O \textit{Arduíno Duemilanove} possui um microprocessador \textit{ATMEGA328P}, sua programação pode ser feita utilizando a linguagem de programação própria, baseada em \textit{Wiring} \cite{arduino1}. No entanto, também é possível é utilizar C++ para construir bibliotecas próprias utilizando também as bibliotecas já prontas do \textit{Arduíno}, e essa foi a opção feita pela equipe. O software de controle é detalhado na Seção \ref{sec_soft_controle}.
+
+Para o interfaceamento com os diversos módulos do sistema, o \textit{Arduíno Duemilanove} possui 14 pinos de comunicação digital \cite{arduino2}, a configuração desses pinos está resumida na Tabela \ref{int_tbl02}.
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|c|} \hline
+        \textbf{Pino} & \textbf{Sentido do Sinal} & \textbf{Tipo de Comunicação} & \textbf{Função} \\ \hline
+        00 & (RX) & Serial & Comunicação Câmera \\ \hline
+        01 & (TX) & Serial & Comunicaçao Câmera \\ \hline
+        02 & Entrada & Digital TTL & Bússola - Pino 1 \\ \hline
+        03 & Entrada & Digital TTL & Bússola - Pino 4 \\ \hline
+        04 & Saída & Digital TTL &LED Direito \\ \hline
+        05 & Saída & Sinal PWM & Motor Esquerdo - Pino 2 \\ \hline
+        06 & Saída & Sinal PWM & Motor Esquerdo - Pino 1 \\ \hline
+        07 & Entrada & Digital TTL & Bússola - Pino 3 \\ \hline
+        08 & Entrada & Digital TTL & Bússola - Pino 2 \\ \hline
+        09 & Saída & Digital TTL & \textit{Speaker} \\ \hline
+        10 & Saída & Sinal PWM & Motor Direito - Pino 2 \\ \hline
+        11 & Saída & Sinal PWM & Motor Direito - Pino 1 \\ \hline
+        12 & Saída & Digital TTL & LED Esquerdo \\ \hline
+        13 & - & - & \textit{Não utilizado} \\ \hline
+    \end{tabular}
+    \caption{Pinos da placa \textit{Arduíno Duemilanove}}
+    \label{int_tbl02}
+\end{table}
+
+\subsection{Comunicação com Indicadores}
+
+Os indicadores do robô são os LEDs, esquerdo e direito, e o \textit{Speaker}. 
+
+Os estados possíveis dos LEDs são aceso ou apagado, como visto na Tabela \ref{int_tbl01}. Para produzir os dois estados, é utilizada uma comunicação digital TTL, em que um sinal baixo (\textit{LOW}) produzirá o estado apagado e o sinal alto (\textit{HIGH}) irá deixar o LED aceso.
+
 \begin{table}[h!]
     \centering
     \begin{tabular}{|c|c|c|} \hline
@@ -50,43 +133,52 @@ Usados para indicação dos estados do robô, detalhados na Tabela \ref{int_tbl0
     \label{int_tbl01}
 \end{table}
 
-\subsubsection{Speaker}
-Utilizado como indicador sonoro de estados específicos do sistema, como reconhecimento do objeto e início e fim da busca do mesmo.
+O LED Direito é ligado no pino 04 e o Esquerdo no 12.
 
-\subsection{Sistema de Tração}
+Para o \textit{Speaker} é gerado um sinal com \textit{duty-cycle} de 50\% numa frequência especificada através da função \textit{tone} presente na biblioteca básica do \textit{Arduíno}.
 
-Para tração do robô foi construído um sistema baseado em um motor elétrico e duas rodas centrais.
+O Speaker é ligado ao \textit{Arduíno} através do pino 09.
 
-\subsubsection{Motores}
-Motor elétrico de corrente contínua \textit{Tamiya} de 3V com rotação de 12300 rpm, ou 205 voltas por segundo \cite{RoboExplorador}
+\subsection{Comunicação com Bússola}
 
-\subsubsection{Caixas de redução}
-Acopladas ao motor e às rodas reduzem a rotação do motor para que seja possível acionar as rodas. Na configuração usada, a redução é de 344:1 \cite{RoboExplorador}.
+A bússola utilizada pela equipe é a \textit{Dinsmore Sensor Modelo \#1490}, uma bússola digital com precisão de 45 graus, ou oito estados \cite{bussola}.
 
-\subsubsection{Rodas}
-O robô utiliza duas rodas \textit{off-road} em seu centro e uma esfera com giro livre atrás para manter o equilíbrio.
+A \textit{Dinsmore \#1490} gera quatro sinais digitais TTL, a combinação desses sinais fornece a orientação lida pela bússola.
 
-Com a rotação de 205 voltas/segundo e a redução de 344:1, a roda completa 0,6 voltas por segundo.
+Os quatro sinais são ligados nos pinos 02, 03, 07 e 08 do \textit{Arduíno}.
 
-\subsection{Sistema de Controle}
+Para funcionamento detalhado da bússola, ver seção \ref{sec_bussola}.
 
-Sistema para controle da movimentação do robô.
+\subsection{Acionamento dos Motores}
+\label{sec_com_motores}
 
-\subsubsection{Ponte H} 
+Para acionamento dos motores, são utilizadas Pontes H, circuitos eletrônicos que permitem o acionamento por parte de um microcontrolador de um motor de corrente contínua em qualquer sentido de rotação. Por não ser objeto de estudo deste trabalho, seu funcionamento e a construção do circuito utilizado no robô não será explicitado, maiores informações podem ser encontradas em \cite{Robo2d} e \cite{ponteh}. 
 
-A Ponte H é um circuito que permite a um microcontrolador acionar um motor de corrente contínua. Por questões eletrônicas \cite{RoboExplorador}, o circuito utilizado no projeto foi construído a partir de componentes discretos.
+A Ponte H, por sua vez, é acionada através de um sinal PWM - \textit{Pulse Width Modulation}. A modulação por largura de pulso é uma técnica usada para obter resultados analógicos com um sinal digital \cite{arduino3}. Uma onda quadrada é gerada, mudando o período em que essa onda está em ALTO (\textit{duty cycle}) é possível obter níveis médios de tensão diferentes. Assim, por exemplo, uma onda sempre em BAIXO, produrizá 0 V de nível médio de tensão, uma onda sempre em ALTO, 5 V; e uma onda 50\% do tempo em ALTO, 2,5 V. Esses diferentes níveis de tensão produzirão diferentes velocidades nos motores.
 
-\subsubsection{Arduíno Duemilanove}
+O \textit{Arduíno} possui portas que implementam o PWM, para utilizá-las é necessário usar a função \textit{analogWrite} que recebe como parâmetro um inteiro entre 0 e 255. Esse valor irá definir o tempo em que o sinal gerado ficará em ALTO.
 
-Placa \textit{Arduíno} utilizada no projeto anterior e reutilizada no projeto atual. Faz o interfaceamento dos diversos sistemas do projeto, \textit{i.e.}, recebe as decisões tomadas pelo Sistema de Navegação, embarcado na câmera, e aciona os motores para que o robô as execute. Seu funcionamento é detalhado na seção \ref{sec_arduino}.
+Neste projeto, a velocidade do robô é constante, então o parâmetro para a \textit{analogWrite} é constante em 127, que produzirá um \textit{duty-cycle} de 50\%, e metade da velocidade do robô.
 
-\subsubsection{Microcontrolador ATMEGA328P}
+Para cada Ponte H são gerados dois sinais que irão acionar os motores para frente ou para trás. Quando o sinal 1 é ALTO e o 2 é BAIXO, o motor gira num sentido, para frente, por exemplo; sinal 1 em BAIXO e sinal 2 em ALTO, ele gira no sentido inverto, para trás; esses sinais em função da ação executada pela robô são apresentados na tabela \ref{int_tbl03}.
 
-Microcontolador presente da \textit{Arduíno Duemilanove}, os códigos construídos para controle do robô (Seção \ref{sec_soft_controle}) serão executados por ele.
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|} \hline
+        \textbf{Ação} & \textbf{Motor Esquerdo} & \textbf{Motor Direito} \\ \hline
+        Parado & Desligado & Desligado \\ \hline
+        Para frente & Frente & Frente \\ \hline
+        Para trás & Trás & Trás \\ \hline
+        Virando esquerda & Frente & Desligado \\ \hline
+        Virando direita & Desligado & Frente \\ \hline
+        Rotacionando esquerda & Frente & Trás \\ \hline
+        Rotacionando direita & Trás & Frente \\ \hline
+    \end{tabular}
+    \caption{Acionamento dos Motores}
+    \label{int_tbl03}
+\end{table}
 
-\section{Plataforma Arduíno}
-\label{sec_arduino}
-
+\subsection{Comunicação com CMUCam}
 
 \section{Software de Controle}
 \label{sec_soft_controle}

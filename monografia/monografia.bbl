@@ -5,9 +5,33 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{1.52 }
 
-\bibitem[Meneguele et al. 2011]{RoboExplorador}
+\bibitem[{Arduino Team} 2011]{arduino1}
+\abntrefinfo{{Arduino Team}}{{Arduino Team}}{2011a}
+{{Arduino Team}. \textbf{Arduino}. Outubro 2011.
+\textit{http://arduino.cc}.}
+
+\bibitem[{Arduino Team} 2011]{arduino2}
+\abntrefinfo{{Arduino Team}}{{Arduino Team}}{2011b}
+{{Arduino Team}. \textbf{Arduino Duemilanove}. Outubro 2011.
+\\ \textit{http://arduino.cc/en/Main/arduinoBoardDuemilanove}.}
+
+\bibitem[{Arduino Team} 2011]{arduino3}
+\abntrefinfo{{Arduino Team}}{{Arduino Team}}{2011c}
+{{Arduino Team}. \textbf{PWM}. Outubro 2011.
+\textit{http://www.arduino.cc/en/Tutorial/PWM}.}
+
+\bibitem[{Dinsmore Sensor Division} 1993]{bussola}
+\abntrefinfo{{Dinsmore Sensor Division}}{{Dinsmore Sensor Division}}{1993}
+{{Dinsmore Sensor Division}. \textbf{Dinsmore Sensing Systems Geral
+  Information}. 1993.}
+
+\bibitem[Meneguele et al. 2011]{Robo2d}
 \abntrefinfo{Meneguele et al.}{MENEGUELE et al.}{2011}
 {MENEGUELE, B.; PADILHA, F.; ARCANJO, V. Robô explorador de labirintos 2d.
 \textbf{Universidade Tecnológica Federal do Paraná}, 2011.}
+
+\bibitem[Patsko 2006]{ponteh}
+\abntrefinfo{Patsko}{PATSKO}{2006}
+{PATSKO, L.~F. \textbf{Tutorial de Montagem da Ponte H}. Dezembro 2006.}
 
 \end{thebibliography}
