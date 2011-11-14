@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.23)  9 NOV 2011 10:13
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.11.11)  14 NOV 2011 00:13
 entering extended mode
  %&-line parsing enabled.
-**monografia.tex
+**monografia
 (./monografia.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
@@ -546,7 +546,7 @@ File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
 ) (./monografia.aux
 (./introducao.aux) (./sistemamecanico.aux) (./sensores.aux) (./visao.aux)
-(./navegacao.aux) (./conclusao.aux))
+(./navegacao.aux) (./conclusao.aux) (./cadernodebordo.aux))
 \openout1 = `monografia.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
@@ -632,7 +632,7 @@ Underfull \hbox (badness 6876) in paragraph at lines 63--63
 
 ]
 Overfull \hbox (4.33916pt too wide) in paragraph at lines 88--88
-\OT1/ptm/m/n/12 EX-PLO-RADOR DE AM-BI-ENTES. 14[] f. Mono-grafia -- De-par-ta-m
+\OT1/ptm/m/n/12 EX-PLO-RADOR DE AM-BI-ENTES. 21[] f. Mono-grafia -- De-par-ta-m
 ento Acad[]emico de Eletr[]onica,
  []
 
@@ -676,16 +676,32 @@ Cap\'{\i }tulo 1.
 
  (./sistemamecanico.tex
 Cap\'{\i }tulo 2.
-) [9
+
+Overfull \hbox (6.02739pt too wide) in paragraph at lines 7--8
+[]\OT1/ptm/m/n/12 Todo o pro-jeto mec[]anico foi re-uti-lizado neste tra-balho,
+ in-cluindo ro-das, caixa de redu[][]ao
+ []
+
+<imagens/robo.png, id=32, 1038.88126pt x 716.6775pt>
+File: imagens/robo.png Graphic file (type png)
+ <use imagens/robo.png>
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 16.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 16.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 16.
+
+[9
 
 
 
-]
+ <./imagens/robo.png (PNG copy)>] [10] [11]) [12]
 \openout2 = `sensores.aux'.
 
  (./sensores.tex
 Cap\'{\i }tulo 3.
-) [10
+) [13
 
 
 
@@ -694,7 +710,7 @@ Cap\'{\i }tulo 3.
 
  (./visao.tex
 Cap\'{\i }tulo 4.
-) [11
+) [14
 
 
 
@@ -703,7 +719,7 @@ Cap\'{\i }tulo 4.
 
  (./navegacao.tex
 Cap\'{\i }tulo 5.
-) [12
+) [15
 
 
 
@@ -712,37 +728,55 @@ Cap\'{\i }tulo 5.
 
  (./conclusao.tex
 Cap\'{\i }tulo 6.
-) [13
+) [16
 
+
+
+] (./monografia.bbl) [17
 
 
 ]
-No file monografia.bbl.
+\openout2 = `cadernodebordo.aux'.
+
+ (./cadernodebordo.tex
 Apendice A.
-AED: lastpage setting LastPage [14
+[18
 
 
 ]
+Overfull \hbox (4.04741pt too wide) in paragraph at lines 40--41
+[]\OT1/ptm/m/n/12 Precisamos agora de-cidir e con-seguir o mi-cro-con-tro-lador
+ para o Rob[]o. Os da plataforma
+ []
+
+
+Overfull \hbox (3.05124pt too wide) in paragraph at lines 58--59
+[]\OT1/ptm/m/n/12 Por orienta[][]ao do pro-fes-sor Hugo, en-tramos em con-tato 
+com di-ver-sos ar-ti-gos de Prestes,
+ []
+
+[19] [20]) [21] AED: lastpage setting LastPage
 +-------------------------------------------------------------------+
 | Comentario, sugestao ou critica sobre o abnTeX? Entre em contato: |
 |                  http://abntex.codigolivre.org.br                 |
 +-------------------------------------------------------------------+
 (./monografia.aux (./introducao.aux) (./sistemamecanico.aux) (./sensores.aux)
-(./visao.aux) (./navegacao.aux) (./conclusao.aux)) ) 
+(./visao.aux) (./navegacao.aux) (./conclusao.aux) (./cadernodebordo.aux)) ) 
 Here is how much of TeX's memory you used:
- 3546 strings out of 495061
- 45967 string characters out of 1182620
- 109160 words of memory out of 3000000
- 6555 multiletter control sequences out of 15000+50000
- 20780 words of font info for 48 fonts, out of 3000000 for 9000
+ 3611 strings out of 495061
+ 46953 string characters out of 1182620
+ 112567 words of memory out of 3000000
+ 6606 multiletter control sequences out of 15000+50000
+ 32377 words of font info for 74 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 36i,8n,43p,283b,228s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf-texlive/f
-onts/enc/dvips/base/8r.enc}</usr/share/texmf-texlive/fonts/type1/urw/times/utmb
-8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb>
-Output written on monografia.pdf (15 pages, 45633 bytes).
+ 36i,9n,43p,479b,318s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/us
+r/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texlive/fon
+ts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/u
+tmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
+Output written on monografia.pdf (22 pages, 104657 bytes).
 PDF statistics:
- 60 PDF objects out of 1000 (max. 8388607)
+ 87 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
