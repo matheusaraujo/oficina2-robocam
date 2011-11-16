@@ -12,7 +12,7 @@ O diagrama do projeto físico do robô é apresentado na Figura \ref{int_fig01}.
 
 \begin{figure}[h!]
     \center
-    \includegraphics[scale=0.3]{imagens/robo.png}
+    \includegraphics[scale=0.35]{imagens/robo_geral.png}
     \caption{Diagrama do Robô}
     \label{int_fig01}
 \end{figure}
@@ -71,12 +71,24 @@ Placa \textit{Arduíno} utilizada no projeto anterior e reutilizada no projeto a
 
 Microcontolador presente da \textit{Arduíno Duemilanove}, os códigos construídos para controle do robô (Seção \ref{sec_soft_controle}) serão executados por ele.
 
+\subsection{Sensores}
+
+São apresentados na seção \ref{sec_sensores}.
+
+\subsubsection{Câmera}
+
+Ver seção \ref{sec_camera}.
+
+\subsubsection{Bússola}
+
+Ver seção \ref{sec_bussola}.
+
 \section{Plataforma Arduíno}
 \label{sec_arduino}
 
 Arduíno é uma plataforma \textit{open-source} para prototipagem eletrônica que busca facilitar a construção de sistemas onde haja interação com objetos e o ambiente. \cite{arduino1}
 
-Para o projeto \textbf{Robô Explorador} foi utilizado uma placa \textit{Arduíno Duemilanove} que foi reutilizada no trabalho atual.
+Para o projeto \textbf{Robô Explorador de Labirintos 2D} foi utilizado uma placa \textit{Arduíno Duemilanove} que foi reutilizada no trabalho atual.
 
 Dentro do projeto, o \textit{Arduíno} exerce um papel central de receber, via comunicação serial, as decisões tomadas pelo Sistema de Exploração, embarcado na câmera, e atuar sobre os motores através da Ponte H. Além disso, ele recebe o sinal lido através da bússola e aciona os dispositivos de indicação. Esse processo é representado na Figura \ref{int_fig02}.
 
@@ -87,9 +99,9 @@ Dentro do projeto, o \textit{Arduíno} exerce um papel central de receber, via c
     \label{int_fig02}
 \end{figure}
 
-O \textit{Arduíno Duemilanove} possui um microprocessador \textit{ATMEGA328P}, sua programação pode ser feita utilizando a linguagem de programação própria, baseada em \textit{Wiring} \cite{arduino1}. No entanto, também é possível é utilizar C++ para construir bibliotecas próprias utilizando também as bibliotecas já prontas do \textit{Arduíno}, e essa foi a opção feita pela equipe. O software de controle é detalhado na Seção \ref{sec_soft_controle}.
+O \textit{Arduíno Duemilanove} possui um microprocessador \textit{ATMEGA328P}, sua programação pode ser feita utilizando a linguagem de programação própria, baseada em \textit{Wiring} \cite{arduino1}. No entanto, é possível utilizar \textit{C++} para construir bibliotecas próprias utilizando também as bibliotecas já prontas do \textit{Arduíno}, e essa foi a opção feita pela equipe. O software de controle é detalhado na Seção \ref{sec_soft_controle}.
 
-Para o interfaceamento com os diversos módulos do sistema, o \textit{Arduíno Duemilanove} possui 14 pinos de comunicação digital \cite{arduino2}, a configuração desses pinos está resumida na Tabela \ref{int_tbl02}.
+Para o interfaceamento com os diversos módulos do sistema, o \textit{Arduíno Duemilanove} possui 14 pinos de comunicação digital \cite{arduino2}, a configuração e utilização desses pinos está resumida na Tabela \ref{int_tbl02}.
 
 \begin{table}[h!]
     \centering
@@ -158,7 +170,7 @@ A Ponte H, por sua vez, é acionada através de um sinal PWM - \textit{Pulse Wid
 
 O \textit{Arduíno} possui portas que implementam o PWM, para utilizá-las é necessário usar a função \textit{analogWrite} que recebe como parâmetro um inteiro entre 0 e 255. Esse valor irá definir o tempo em que o sinal gerado ficará em ALTO.
 
-Neste projeto, a velocidade do robô é constante, então o parâmetro para a \textit{analogWrite} é constante em 127, que produzirá um \textit{duty-cycle} de 50\%, e metade da velocidade do robô.
+Neste projeto, na maior parte dos movimentos, a velocidade do robô é constante, então foi definido experimentalmente o valor 127 para parâmetro da função \textit{analogWrite}, que produzirá um \textit{duty-cycle} de 50\%, e metade da velocidade do robô. Nos movimentos de correção do alinhamento do robô, esse valor é alterado para 40 ou 60\%.
 
 Para cada Ponte H são gerados dois sinais que irão acionar os motores para frente ou para trás. Quando o sinal 1 é ALTO e o 2 é BAIXO, o motor gira num sentido, para frente, por exemplo; sinal 1 em BAIXO e sinal 2 em ALTO, ele gira no sentido inverto, para trás; esses sinais em função da ação executada pela robô são apresentados na tabela \ref{int_tbl03}.
 
@@ -180,5 +192,87 @@ Para cada Ponte H são gerados dois sinais que irão acionar os motores para fre
 
 \subsection{Comunicação com CMUCam}
 
+As decisões de movimentação são tomadas na aplicação que roda no microprocessador da câmera, no entanto quem aciona os motores e de fato produz o movimento é a aplicação executada no \textit{Arduíno}, por isso a necessidade de comunicação entre os dois dispositivos.
+
+Esse interfaceamento entre o \textit{Arduíno} e a \textit{CMUCam} é feito através de comunicação serial assíncrona \textit{full-duplex}.
+
+Por comunicação serial, entende-se aquela em que os \textit{bits} são enviados em \textit{fila} por um mesmo canal de comunicação. Por ser assíncrona, não há necessidade sincronismo de tempo entre os dois dispositivos envolvidos na comunicação, a própria mensagem irá definir o sinal de sincronismo. Como há necessidade de envio de mensagens da câmera para o \textit{Arduíno} e do \textit{Arduíno} para a câmera, a comunicação precisa ser \textit{full-duplex}, isso é, trafegar nos dois sentidos.
+
+Para cada troca de mensagem será enviado um byte entre os dispositivos.
+
+As mensagens que trafegarão da \textit{CMUCam} para o \textit{Arduíno} conterão comandos de ação para o robô, andar para frente ou para trás, rotacionar para a esquerda ou para a direita, parar o robô ou ainda corrigir o movimento do robô para determinado lado \footnote{Quando o movimento do robõ for por demais irregular e ele não conseguir seguir uma linha reta.}. E a câmera pode ainda requisitar ao \textit{Arduíno} a leitura de informação da bússola, nesse momento o \textit{Arduíno} envia para ela a informação do sensor.
+
+Foram definidas constantes que serão enviadas de um dispositivo para o outro, apresentadas na Tabela \ref{int_tbl04}.
+
+\begin{table}[htb!]
+    \centering
+    \begin{tabular}{|c|c|l|} \hline
+        \textbf{Valor} & \textbf{Constante} & \textbf{Signficado} \\ \hline
+
+        \multicolumn{3}{|c|}{\textit{Operações para o robô - Camêra-Arduíno}} \\ \hline
+        1 & FORWARD & Movimenta robô para frente \\ \hline
+        2 & BACKWARD & Movimenta robô para trás \\ \hline
+        3 & SPINLEFT & Rotaciona robô para esquerda \\ \hline
+        4 & SPINRIGHT & Rotaciona robô para direita \\ \hline
+        5 & STOP & Pára robô \\ \hline
+        6 & COMPASS & Executa leitura da bússola\\ \hline
+        7 & ADJUSTLEFT & Corrige movimento do robô para esquerda \\ \hline
+        8 & ADJUSTRIGHT & Corrige movimento do robô para direita \\ \hline
+            
+        \multicolumn{3}{|c|}{\textit{Leituras da bússola - Arduíno-Câmera}} \\ \hline
+        1 & NORTH & Norte \\ \hline
+        2 & NORTHEAST & Nordeste \\ \hline
+        3 & EAST & Leste \\ \hline
+        4 & SOUTHEAST & Sudeste \\ \hline
+        5 & SOUTH & Sul \\ \hline
+        6 & SOUTHWEST & Sudoeste \\ \hline
+        7 & WEST & Oeste \\ \hline
+        8 & NORTHWEST & Noroeste \\ \hline
+    \end{tabular}
+    \caption{Comunicação Arduíno-Câmera}
+    \label{int_tbl04}
+
+\end{table}
+
+
 \section{Software de Controle}
 \label{sec_soft_controle}
+
+O Sistema de Controle executado no \textit{Arduíno} é responsável por receber e interpretar os comandos enviados pela \textit{CMUCam3} e atuar sobre os motores do robô produzindo o movimento necessário. Para executar essa tarefa, a equipe desenvolveu uma biblioteca orientada a objetos em \textit{C++}, cujo diagrama básico é apresentado na figura \ref{int_fig03}.
+
+A ideia de construir a classe se baseia em representar em código a maneira como a equipe enxerga a função do \textit{Arduíno} e tentar encapsular as funções em classes que devem então ser apenas instanciadas, facilitando a programação, já que operações por vezes complexas são convertidas em operações elementares.
+
+\begin{figure}[htb!]
+    \center
+    \includegraphics[scale=0.5]{imagens/diagrama_classe_robot.png}
+    \caption{Diagrama - Biblioteca \textit{Robot}}
+    \label{int_fig03}
+\end{figure}
+
+\subsection{Compass}
+
+Classe responsável por fazer a leitura da bússola e decodificar o sinal lido, tendo como resposta apenas a constante que representa a direção cardeal lida.
+
+\subsection{Motor}
+
+Classe responsável por acionar os motores, recebe como parâmetro qual movimento deve ser feito e atua sobre os motores produzindo-o.
+
+\subsection{CommSerial}
+
+Classe para a comunicação com a \textit{CMUCam3}, possui um método de escrita e um de leitura apenas.
+
+\subsection{Indicator}
+
+Classe para produzir a representação necessária nos indicadores do robô.
+
+\subsection{Robot}
+
+Uma vez que todas as ações do robô estão definidas nas classes anteriormente citadas, a classe \textit{Robot} possui objetos das mesmas e sua tarefa é chamar as funções nos momentos adequados. 
+
+No programa principal do \textit{Arduíno} há um objeto dessa classe que possui um método principal que funciona como um \textit{watchdog} para os comandos da \textit{CMUCam} através da classe \textit{CommSerial}, quando ele recebe um comando, dispara as funções das classes imediatamente abaixo.
+
+\subsection{Constants}
+
+Armazena as constantes definidas ao longo da biblioteca e não possui nenhum método. Armazena tanto as constantes de comunicação, Tabela \ref{int_tbl04}, quanto as constantes para acionamento dos motores, por exemplo.
+
+

@@ -20,6 +20,11 @@
 {{Arduino Team}. \textbf{PWM}. Outubro 2011.
 \textit{http://www.arduino.cc/en/Tutorial/PWM}.}
 
+\bibitem[Buechel et al. 2005]{newjersey}
+\abntrefinfo{Buechel et al.}{BUECHEL et al.}{2005}
+{BUECHEL, M.; NISH, T.; VACIRCA, N. New jersey autonomous vehicle.
+\textbf{New Jersey: The College of New Jersey}, 2005.}
+
 \bibitem[{Dinsmore Sensor Division} 1993]{bussola}
 \abntrefinfo{{Dinsmore Sensor Division}}{{Dinsmore Sensor Division}}{1993}
 {{Dinsmore Sensor Division}. \textbf{Dinsmore Sensing Systems Geral
