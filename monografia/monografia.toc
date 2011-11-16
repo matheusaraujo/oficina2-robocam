@@ -43,9 +43,8 @@
 \contentsline {chapter}{\numberline {4}\MakeUppercase {Vis\IeC {\~a}o}}{21}
 \contentsline {section}{\numberline {4.1}\MakeUppercase {Reconhecimento de Imagens}}{21}
 \contentsline {chapter}{\numberline {5}\MakeUppercase {Navega\IeC {\c c}\IeC {\~a}o}}{22}
-\contentsline {section}{\numberline {5.1}\MakeUppercase {Place Agents}}{22}
-\contentsline {section}{\numberline {5.2}\MakeUppercase {Constru\IeC {\c c}\IeC {\~a}o de Mapa}}{22}
-\contentsline {section}{\numberline {5.3}\MakeUppercase {Roteamento}}{22}
-\contentsline {chapter}{\numberline {6}\MakeUppercase {Conclus\IeC {\~a}o}}{23}
-\contentsline {chapter}{REFER\^ENCIAS}{24}
-\contentsline {chapter}{Ap\^endice{} A{} -$\tmspace -\thinmuskip {.1667em}$-{} \MakeUppercase {Caderno de Bordo}}{25}
+\contentsline {section}{\numberline {5.1}\MakeUppercase {Constru\IeC {\c c}\IeC {\~a}o do mapa}}{22}
+\contentsline {section}{\numberline {5.2}\MakeUppercase {Roteamento}}{23}
+\contentsline {chapter}{\numberline {6}\MakeUppercase {Conclus\IeC {\~a}o}}{24}
+\contentsline {chapter}{REFER\^ENCIAS}{25}
+\contentsline {chapter}{Ap\^endice{} A{} -$\tmspace -\thinmuskip {.1667em}$-{} \MakeUppercase {Caderno de Bordo}}{26}

@@ -1,7 +1,21 @@
 \chapter{Navegação}
 
-\section{Place Agents}
+Para o robô encontrar o objeto anteriormente especificado ele deve saber se locomover dentro de um ambiente desconhecido. Para navegar no ambiente, o robô deve criar uma espécie de mapa que contenha informações que possibilitem sua locomoção no ambiente. Duas abordagens distintas são a representação de maneira global ou de maneira local [5].
 
-\section{Construção de Mapa}
+De acordo com Jorg [5], a representação global procura descrever o ambiente da maneira mais fiel à realidade possível, indicando o mapa a partir de seus nodos e suas conexões, retendo o máximo de informação possível para conseguir manter uma consistência espacial global conforme o mapa vai sendo construído. A grande desvantagem da representação global é a necessidade de se reter e processar toda essa informação para criar-se o mapa, portanto conforme a quantidade de nodos aumenta, o mapa em si aumenta e a complexidade computacional também aumenta consideravelmente.
+
+Na representação local os nodos (pontos de referência, denominados Place Agents) possuem informações apenas do próprio local, de quais são os nodos vizinhos, possíveis pontos de interesse (objetos de destaque para identificação do nodo, por exemplo) e informações pertinentes sobre como alcançar o próximo nodo (direção, existência de obstáculos, etc.) seja este nodo já presente no mapa ou não.
+
+Para nosso projeto, a equipe optou por utilizar a representação local para o projeto, pois a abordagem global se torna ineficiente devido a sua complexidade computacional envolvida para manter a consistência do mapa. A abordagem local permite o escalonamento do sistema para permitir a ele operar em ambientes maiores.
+
+\section{Construção do mapa}
+
+Para a criação do mapa utilizamos principalmente a câmera CMUcam3 acoplada ao robô. A câmera é a principal responsável por adquirir informações do ambiente para a criação do mapa. Junto com a câmera, a bússola é utilizada para fornecer as direções entre um nodo e outro. Com as informações obtidas da câmera e da bússola, o robô deve ser capaz de construir um mapa do ambiente e deve ser capaz de locomover-se dentro do ambiente, procurando o objeto desejado e desviando de obstáculos caso necessário.
+
+Inicialmente, ao ser inicializado num novo ambiente, o robô deve criar um nodo A que será demarcado como o primeiro nodo existente no mapa. A primeira informação a ser obtida será procurar características do ambiente ou objetos próximos ao nodo para caracterizar o nodo em questão. Após obter informações do ambiente atual, o robô deve observar seus arredores e definir outros nodos alcançáveis a partir do nodo atual. O robô então deve guardar informações pertinentes sobre como chegar a cada um dos nodos vizinhos, como direção e a existência de objetos de destaque. Tais informações sobre o caminho serão guardadas em ambos os nodos envolvidos (nodo A e nodo B, inicio e destino, respectivamente). Dentre todos os nodos vizinhos, o sistema escolhe um e se locomove até ele. O processo então é repetido diversas vezes até que o mapa seja completamente montado (não existe nenhum nodo alcançável não visitado) ou o objeto seja encontrado.
 
 \section{Roteamento}
+
+Na representação local os nodos (pontos de referência, denominados Place Agents) possuem informações apenas do próprio local, de quais são os nodos vizinhos, possíveis pontos de interesse (objetos de destaque para identificação do nodo, por exemplo) e informações pertinentes sobre como alcançar o próximo nodo (direção, existência de obstáculos, etc.) seja este já presente no mapa ou não. Na representação local, para se alcançar um nodo já mapeado e que não seja vizinho ao atual será necessário um algoritmo de roteamento no sistema, onde cada Place Agent pergunta por essa informação aos seus vizinhos e assim sucessivamente até que o nodo requisitado seja encontrado.
+
+Quando o nodo requisitado é encontrado o robô traça um caminho para chegar ao local desejado, passando por nodos já existentes. 

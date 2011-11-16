@@ -25,6 +25,16 @@
 {BUECHEL, M.; NISH, T.; VACIRCA, N. New jersey autonomous vehicle.
 \textbf{New Jersey: The College of New Jersey}, 2005.}
 
+\bibitem[{Carmegie Mellon University} 2006]{cmucam02}
+\abntrefinfo{{Carmegie Mellon University}}{{Carmegie Mellon University}}{2006}
+{{Carmegie Mellon University}. \textbf{CMUcam3 Datasheet}. 2006.}
+
+\bibitem[{Carmegie Mellon University} 2011]{cmucam01}
+\abntrefinfo{{Carmegie Mellon University}}{{Carmegie Mellon University}}{2011}
+{{Carmegie Mellon University}. \textbf{CMUcam3: Open Source Programmable
+  Embedded Color Vision Plataform}. 2011.
+\textit{http://cmucam.org}.}
+
 \bibitem[{Dinsmore Sensor Division} 1993]{bussola}
 \abntrefinfo{{Dinsmore Sensor Division}}{{Dinsmore Sensor Division}}{1993}
 {{Dinsmore Sensor Division}. \textbf{Dinsmore Sensing Systems Geral
