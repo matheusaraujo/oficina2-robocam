@@ -1,0 +1,16 @@
+### TO-DO List ###
+
+Need to correct files
+
+(ok) 1 - Constans.h
+(ok) 2 - Compass.h
+(ok) 3 - Compass.cpp
+(ok) 4 - Motor.h
+(ok) 5 - Motor.cpp
+6 - Robot.h
+7 - Robot.cpp
+(ok) 8 - Indicator.h
+(ok) 9 - Inficator.cpp
+(TO-DO) 10 - CommSerial.h
+(TO-DO) 11 - CommSerial.cpp
+

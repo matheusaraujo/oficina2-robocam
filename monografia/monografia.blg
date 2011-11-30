@@ -1,4 +1,5 @@
-This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2012/dev/Arch Linux)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: monografia.aux
 A level-1 auxiliary file: introducao.aux
 A level-1 auxiliary file: sistemamecanico.aux
@@ -8,11 +9,22 @@ A level-1 auxiliary file: navegacao.aux
 A level-1 auxiliary file: conclusao.aux
 A level-1 auxiliary file: cadernodebordo.aux
 The style file: abnt-alf.bst
-Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated wiz_functions (elt_size=8) to 6000 items from 3000.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
 Database file #1: abnt-options.bib
 Database file #2: monografia.bib
 Warning--I didn't find a database entry for "abnt-etal-list=99"
-Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated glb_str_ptr (elt_size=8) to 20 items from 10.
+Reallocated global_strs (elt_size=5001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=8) to 20 items from 10.
 +---------------------------------------------------------+
 | Estilo bibliografico abnt-alf.bst versao 1.52           |
 | Implementa a NBR6023, NBR10520 e NBR10523               |

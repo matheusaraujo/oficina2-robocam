@@ -1,0 +1,6 @@
+\beamer@endinputifotherversion {3.10pt}
+\select@language {brazil}
+\beamer@sectionintoc {1}{Introdu\IeC {\c c}\IeC {\~a}o}{2}{0}{1}
+\beamer@sectionintoc {2}{Projeto Mec\IeC {\^a}nico}{3}{0}{2}
+\beamer@subsectionintoc {2}{1}{Rob\IeC {\^o}}{4}{0}{2}
+\beamer@subsectionintoc {2}{2}{Ardu\IeC {\'\i }no}{5}{0}{2}
