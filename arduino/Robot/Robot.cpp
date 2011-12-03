@@ -40,7 +40,7 @@ void Robot::start(){
         2, 4, 4, 4, 1
     };
 
-    playsound(melody, duration, 45);
+    indicator.playsound(melody, duration, 45);
 }
 
 void Robot::finish(){
@@ -69,7 +69,7 @@ void Robot::finish(){
         8, 8, 8, 8, 8
     };
 
-    playsound(melody, duration, 50);
+    indicator.playsound(melody, duration, 50);
 }
 
 void Robot::move(int moviment){
@@ -87,16 +87,7 @@ int Robot::orientation(){
 }
 
 void Robot::test(){
-	int oo = compass.orientation();
-	int o = oo;
-
-	forward();
-
-	while(o == oo){
-		o = compass.orientation();
-	}
-
-	stop();
+	return;
 }
 
 

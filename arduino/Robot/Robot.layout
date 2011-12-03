@@ -1,28 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="CommSerial.cpp" open="0" top="0" tabpos="1">
+	<File name="CommSerial.cpp" open="1" top="0" tabpos="1">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="Compass.cpp" open="0" top="0" tabpos="2">
+	<File name="Compass.cpp" open="1" top="0" tabpos="2">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="Indicator.h" open="1" top="0" tabpos="5">
-		<Cursor position="169" topLine="0" />
-	</File>
-	<File name="Motor.cpp" open="1" top="1" tabpos="6">
-		<Cursor position="0" topLine="0" />
-	</File>
-	<File name="Motor.h" open="1" top="0" tabpos="3">
-		<Cursor position="564" topLine="0" />
-	</File>
-	<File name="Robot.cpp" open="1" top="0" tabpos="4">
-		<Cursor position="2139" topLine="56" />
-	</File>
-	<File name="Robot.h" open="1" top="0" tabpos="2">
-		<Cursor position="212" topLine="2" />
-	</File>
-	<File name="to-do.txt" open="1" top="0" tabpos="1">
-		<Cursor position="29" topLine="0" />
+	<File name="Robot.cpp" open="1" top="1" tabpos="3">
+		<Cursor position="0" topLine="6" />
 	</File>
 </CodeBlocks_layout_file>

@@ -14,10 +14,10 @@ class Compass{
 
 	private:
 
-		byte _PIN1;
-		byte _PIN2;
-		byte _PIN3;
-		byte _PIN4;
+		char _PIN1;
+		char _PIN2;
+		char _PIN3;
+		char _PIN4;
 
 	public:
 

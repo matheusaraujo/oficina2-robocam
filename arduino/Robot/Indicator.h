@@ -8,13 +8,15 @@
 
 */
 
+#define Indicator_h
+
 class Indicator{
 
     private:
 
-        byte _LED_L;
-        byte _LED_R;
-        byte _SPEAKER;
+        char _LED_L;
+        char _LED_R;
+        char _SPEAKER;
 
     public:
 

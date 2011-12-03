@@ -8,9 +8,9 @@
 
 */
 
-#include "Motor.h"
+#include "Indicator.h"
 #include "Constants.h"
-#include "utils/delay.h"
+#include "util/delay.h"
 
 #include "WProgram.h"
 
@@ -33,33 +33,33 @@ void Indicator::led(bool left, bool right){
 }
 
 void Indicator::ledmotor(int moviment){
-    if (moviment == Constants.FORWARD)
+    if (moviment == Constants::FORWARD)
         led(true, true);
-    else if (moviment == Constants.BACKWARD)
+    else if (moviment == Constants::BACKWARD)
         led(true, true);
-    else if (moviment == SPINLEFT)
+    else if (moviment == Constants::SPINLEFT)
         led(true, false);
-    else if (moviment == Constants.SPINRIGHT)
+    else if (moviment == Constants::SPINRIGHT)
         led(false, true);
-    else if (moviment == Constants.STOP)
+    else if (moviment == Constants::STOP)
         led(false, false);
-    else if (moviment == Constants.ADJUSTLEFT)
+    else if (moviment == Constants::ADJUSTLEFT)
         led(true, false);
-    else if (moviment == Constants.ADJUSTRIGHT)
+    else if (moviment == Constants::ADJUSTRIGHT)
         led(false, true);
 }
 
 void Indicator::playsound(int melody[], int duration[], int length){
 
-    for(int i = 0, led = true; i < length; i++, led = !led){
+    for(int i = 0, l = true; i < length; i++, l = !l){
 
-        led(led, !led);
+        led(l, !l);
 
         int nduration = 1000/(duration[i]);
         int pause = nduration * 1.30;
 
         tone(_SPEAKER, melody[i], nduration);
-        _delay_ms_(pause);
+        _delay_ms(pause);
 
         noTone(_SPEAKER);
 
