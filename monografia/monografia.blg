@@ -1,4 +1,5 @@
-This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2012/dev/Arch Linux)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: monografia.aux
 A level-1 auxiliary file: introducao.aux
 A level-1 auxiliary file: sistemamecanico.aux
@@ -8,56 +9,67 @@ A level-1 auxiliary file: navegacao.aux
 A level-1 auxiliary file: conclusao.aux
 A level-1 auxiliary file: cadernodebordo.aux
 The style file: abnt-alf.bst
-Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated wiz_functions (elt_size=8) to 6000 items from 3000.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
 Database file #1: abnt-options.bib
 Database file #2: monografia.bib
 Warning--I didn't find a database entry for "abnt-etal-list=99"
-Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated glb_str_ptr (elt_size=8) to 20 items from 10.
+Reallocated global_strs (elt_size=5001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=8) to 20 items from 10.
 +---------------------------------------------------------+
 | Estilo bibliografico abnt-alf.bst versao 1.52           |
 | Implementa a NBR6023, NBR10520 e NBR10523               |
 | Em caso de duvidas ou problemas com este estilo procure |
 | http://abntex.codigolivre.org.br                        |
 +---------------------------------------------------------+
-You've used 10 entries,
+You've used 13 entries,
             6523 wiz_defined-function locations,
-            1205 strings with 10033 characters,
-and the built_in function-call counts, 5695 in all, are:
-= -- 462
-> -- 161
+            1216 strings with 10349 characters,
+and the built_in function-call counts, 7315 in all, are:
+= -- 558
+> -- 206
 < -- 2
-+ -- 104
-- -- 51
-* -- 339
-:= -- 811
-add.period$ -- 24
-call.type$ -- 12
-change.case$ -- 70
-chr.to.int$ -- 14
-cite$ -- 7
-duplicate$ -- 212
-empty$ -- 530
-format.name$ -- 237
-if$ -- 1373
++ -- 120
+- -- 66
+* -- 440
+:= -- 1050
+add.period$ -- 34
+call.type$ -- 15
+change.case$ -- 90
+chr.to.int$ -- 17
+cite$ -- 10
+duplicate$ -- 292
+empty$ -- 688
+format.name$ -- 306
+if$ -- 1747
 int.to.chr$ -- 4
 int.to.str$ -- 2
-missing$ -- 146
-newline$ -- 41
-num.names$ -- 35
-pop$ -- 192
+missing$ -- 193
+newline$ -- 55
+num.names$ -- 50
+pop$ -- 252
 preamble$ -- 1
-purify$ -- 34
+purify$ -- 43
 quote$ -- 0
-skip$ -- 481
+skip$ -- 585
 stack$ -- 1
-substring$ -- 133
-swap$ -- 72
+substring$ -- 187
+swap$ -- 98
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 40
+while$ -- 58
 width$ -- 0
-write$ -- 104
+write$ -- 145
 (There was 1 warning)

@@ -1,10 +1,27 @@
+/*
+
+    # ROBOCAM 1.0 - UTFPR, 2011-02
+    # L. Camargo, M. Teider, M. Araujo
+
+    Robot.h
+    Classe central da biblioteca
+
+*/
+
 #define Robot_h
 
 #include "WProgram.h"
 #include "pitches.h"
+#include "util/delay.h"
+
+
+#include "Constants.h"
+
 #include "Compass.h"
+#include "Indicator.h"
+#include "Motor.h"
+
 #include "CommSerial.h"
-#include "/usr/include/Constants.h"
 
 /*
     PINAGEM DO ARDUÍNO:
@@ -20,43 +37,20 @@
 class Robot
 {
     private:
-        void setled(bool left, bool right);        
-        void setmotor(bool m1p1, bool m1p2, bool m2p1, bool m2p2);
-        void setmotor(bool m1p1, bool m1p2, bool m2p1, bool m2p2, int pwm1, int pwm2);
-        byte _MOTOR1_PIN1;
-        byte _MOTOR1_PIN2;
-        byte _MOTOR2_PIN1;
-        byte _MOTOR2_PIN2;
-        byte _LED_L;
-        byte _LED_R;
-        byte _SPEAKER;
-        bool _m1p1;
-        bool _m1p2;
-        bool _m2p1;
-        bool _m2p2;
-		int spin_tolerance; // ciclos de tolerância no spin
+
 		Compass compass;
+		Motor motor;
+		Indicator indicator;
+
     public:
+
         Robot();
+
         void start();
         void finish();
-        void playsound(int melody[], int duration[], int length);        
-        void forward();
-        void forward(int tdelay);
-        void adjustleft();
-        void adjustright();
-        void backward();
-        void backward(int tdelay);
-        void turnleft();
-        void turnleft(int tdelay);
-        void turnright(); 
-        void turnright(int tdelay);
-		void spinleft();
-		void spinleft(int tdelay);
-		void spinright();
-		void spinright(int tdelay);
-        void stop();
-        void forcestop();	
-		void test();
+        void move(int moviment);
+        void move(int moviment, int tdelay);
 		int orientation();
+
+		void test();
 };

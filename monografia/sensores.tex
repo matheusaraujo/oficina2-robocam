@@ -42,3 +42,15 @@ A combinação entre esses estados e sua representação são apresentados na Ta
 
 \section{Câmera}
 \label{sec_camera}
+
+Para o projeto foi adquirida uma \textit{CMUcam3}, desenvolvida pela \textit{Carmegie Mellon University}, que se propõe a criar um sistema de visão simples em sistemas embarcados através de um sensor inteligente \cite{cmucam01}.
+
+A \textit{CMUcam3} utiliza um sistema baseado na arquitetura \textit{ARM7TDMI} e tem como principal microprocessador um \textit{Philips LPC2106} conectado a uma câmera CMOS \cite{cmucam02}.
+
+A justificativa da escolha da \textit{CMUcam3} se baseia na existência de diversos exemplos de códigos e bibliotecas prontas para o processamento de imagens para essa plataforma, como obtenção de mapa de cores, histograma e detecção de bordas.
+
+Por se tratar de um microprocessador com maior capacidade de processamento, o sistema de controle e tomada de decisões foi desenvolvido no \textit{LPC2106}.
+
+A alimentação da \textit{CMUcam3} é feita por quatro pilhas AA em série, totalizando 6V. 
+
+
