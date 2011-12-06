@@ -7,25 +7,32 @@
 #include <cc3_color_info.h>
 #include <cc3_frame_diff.h>
 
-const int CENT_X_LEFT = 25;
-const int CENT_X_RIGHT = 70;
-
-const int MIN_PIX = 5;
-const int NUM_PIX = 700;
-
 const char FORWARD = 'a';
-const char SPINLEFT = 'c';
-const char SPINRIGHT = 'b';
+const char SPINLEFT = 'b';
+const char SPINRIGHT = 'c';
 const char BACKWARDS = 'd';
 const char STOP = 'e';
 
+const int MIN_PIXELS = 30;
+const int MAX_PIXELS = 700;
+
+int x_left;
+int x_right;
+int x_mid;
+int x_mid_left;
+int x_mid_right;
+
 void simple_track_color(cc3_track_pkt_t* t_pkt);
 
+void left();
+void right();
+void forward();
+void stop();
+void spin();
+
+cc3_track_pkt_t t_pkt;
+
 int main(void) {
-
-char last_action = SPINLEFT;
-
-  cc3_track_pkt_t t_pkt;
 
   uint32_t x0, y0, x1, y1;
   cc3_frame_diff_pkt_t fd_pkt;
@@ -78,6 +85,14 @@ char last_action = SPINLEFT;
 
   cc3_pixbuf_frame_set_roi (x0, y0, x1, y1);
 
+  x_left = 3 * cc3_g_pixbuf_frame.raw_width/4;
+  x_right = cc3_g_pixbuf_frame.raw_width/4;
+
+  x_mid = (x_left + x_right) / 2;
+
+  x_mid_left = x_left - (x_mid/4);
+  x_mid_right = x_right + (x_mid/4);
+
   int i = 0;
   
   while(true) {
@@ -91,30 +106,33 @@ char last_action = SPINLEFT;
 #endif
 
 #ifndef VIRTUAL_CAM
-	
-	if(t_pkt.num_pixels > MIN_PIX) {
-		if(t_pkt.centroid_x < CENT_X_LEFT) {
-			printf("%c", SPINLEFT);
-			last_action = SPINLEFT;
-		}
-		else if(t_pkt.centroid_x > CENT_X_RIGHT) {
-			printf("%c", SPINRIGHT);
-			last_action = SPINRIGHT;
-		}
-		else if(t_pkt.num_pixels < NUM_PIX) {
-			printf("%c", FORWARD);
-			last_action = BACKWARDS;
-		}
-		else {
+	if(t_pkt.num_pixels > MIN_PIXELS) {
+		if((t_pkt.x0 > x_left) && (t_pkt.x1 < x_right)) {
 			printf("%c", STOP);
-			last_action = SPINLEFT;
+			stop();
+		}
+		else if (t_pkt.x0 < x_right) {
+			printf("%c", SPINLEFT);
+			left();
+		}
+		else if (t_pkt.x1 > x_left) {
+			printf("%c", SPINRIGHT);
+			right();
+		}
+		else if (t_pkt.num_pixels < MAX_PIXELS) {
+			printf("%c", FORWARD);
+			forward();
+		} else {
+			printf("%c", STOP);
+			stop();
 		}
 	}
 	else {
-		printf("%c", last_action);
+		printf("%c", SPINLEFT);
+		spin();
 	}
-
-	cc3_timer_wait_ms(100);
+	
+	cc3_timer_wait_ms(200);
 #endif
    }
   
@@ -145,4 +163,59 @@ void simple_track_color(cc3_track_pkt_t * t_pkt)
 
   free (img.pix);
   return;
+}
+
+void left() {
+	int c = 0;
+	do {
+		simple_track_color(&t_pkt);
+		c = (t_pkt.x0 + t_pkt.x1)/2;
+		if(t_pkt.num_pixels == 0) return;
+		if(c > x_left) return;
+	}
+	while(c > x_mid_right);
+	return;
+}
+
+void right() {
+	int c = 0;
+	do {
+		simple_track_color(&t_pkt);
+		c = (t_pkt.x0 + t_pkt.x1)/2;
+		if(t_pkt.num_pixels == 0) return;
+		if(c < x_right) return;
+	}
+	while(c < x_mid_left);
+	return;
+}
+
+void spin() {
+	int c = 0;
+	do {
+		simple_track_color(&t_pkt);
+	}
+	while(t_pkt.num_pixels < MIN_PIXELS);
+	return;
+}
+
+void stop() {
+	int c = 0;
+	do {
+		simple_track_color(&t_pkt);
+	}
+	while(t_pkt.num_pixels > MAX_PIXELS);
+	return;
+}
+
+void forward() {
+	int c = 0;
+	do {
+		simple_track_color(&t_pkt);
+		c = (t_pkt.x0 + t_pkt.x1)/2;
+		if(c > x_left) return;
+		if(c > x_right) return;
+		if(t_pkt.num_pixels < MIN_PIXELS);
+	}
+	while(t_pkt.num_pixels < MAX_PIXELS);
+	return;
 }
