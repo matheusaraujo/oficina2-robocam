@@ -10,7 +10,6 @@
 const int CENT_X_LEFT = 25;
 const int CENT_X_RIGHT = 70;
 
-const int MIN_PIX = 5;
 const int NUM_PIX = 700;
 
 const char FORWARD = 'a';
@@ -92,7 +91,7 @@ char last_action = SPINLEFT;
 
 #ifndef VIRTUAL_CAM
 	
-	if(t_pkt.num_pixels > MIN_PIX) {
+	if(t_pkt.num_pixels > 50) {
 		if(t_pkt.centroid_x < CENT_X_LEFT) {
 			printf("%c", SPINLEFT);
 			last_action = SPINLEFT;
