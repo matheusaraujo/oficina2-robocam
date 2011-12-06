@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for files in *.PPM
+do
+ sed '2d' $files > aux.PPM
+ mv aux.PPM $files
+done
