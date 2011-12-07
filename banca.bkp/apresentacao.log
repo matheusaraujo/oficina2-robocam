@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2012/dev/Arch Linux) (format=pdflatex 2011.11.30)  7 DEC 2011 13:46
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2012/dev/Arch Linux) (format=pdflatex 2011.11.30)  7 DEC 2011 02:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1092,13 +1092,13 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
-<images/robo.jpg, id=113, 2601.72pt x 1951.29pt>
+<images/robo.jpg, id=91, 2601.72pt x 1951.29pt>
 File: images/robo.jpg Graphic file (type jpg)
  <use images/robo.jpg>
-Package pdftex.def Info: images/robo.jpg used on input line 25.
+Package pdftex.def Info: images/robo.jpg used on input line 24.
 (pdftex.def)             Requested size: 312.9472pt x 199.15996pt.
 
-Overfull \hbox (5.65733pt too wide) in paragraph at lines 25--25
+Overfull \hbox (5.65733pt too wide) in paragraph at lines 24--24
 [][]  
  []
 
@@ -1107,117 +1107,104 @@ Overfull \hbox (5.65733pt too wide) in paragraph at lines 25--25
  <./images/robo.jpg>] [3
 
 ]
-<images/robo_geral.png, id=187, 1050.92625pt x 716.6775pt>
+<images/robo_geral.png, id=157, 1050.92625pt x 716.6775pt>
 File: images/robo_geral.png Graphic file (type png)
 
 <use images/robo_geral.png>
-Package pdftex.def Info: images/robo_geral.png used on input line 65.
+Package pdftex.def Info: images/robo_geral.png used on input line 62.
 (pdftex.def)             Requested size: 312.97115pt x 199.17015pt.
 
-Overfull \hbox (5.68127pt too wide) in paragraph at lines 65--65
+Overfull \hbox (5.68127pt too wide) in paragraph at lines 62--62
 [][]  
- []
-
-
-Overfull \vbox (1.12758pt too high) detected at line 65
  []
 
 [4
 
  <./images/robo_geral.png (PNG copy)>] [5
 
-] [6
-
-] [7
-
 ]
-<images/processo_arduino.png, id=319, 828.09375pt x 273.02pt>
+<images/processo_arduino.png, id=223, 828.09375pt x 273.02pt>
 File: images/processo_arduino.png Graphic file (type png)
 
 <use images/processo_arduino.png>
-Package pdftex.def Info: images/processo_arduino.png used on input line 147.
+Package pdftex.def Info: images/processo_arduino.png used on input line 106.
 (pdftex.def)             Requested size: 199.16353pt x 85.35603pt.
- [8
+ [6
 
- <./images/processo_arduino.png (PNG copy)>] <images/cmucam.jpg, id=351, 32.521
+ <./images/processo_arduino.png (PNG copy)>] <images/cmucam.jpg, id=257, 32.521
 5pt x 30.5943pt>
 File: images/cmucam.jpg Graphic file (type jpg)
  <use images/cmucam.jpg>
-Package pdftex.def Info: images/cmucam.jpg used on input line 172.
+Package pdftex.def Info: images/cmucam.jpg used on input line 130.
 (pdftex.def)             Requested size: 85.37315pt x 85.3595pt.
 
-[9
+[7
 
- <./images/cmucam.jpg>]
-<images/bussola1.png, id=388, 232.87pt x 159.59625pt>
+ <./images/cmucam.jpg>] [8
+
+]
+<images/bussola1.png, id=323, 232.87pt x 159.59625pt>
 File: images/bussola1.png Graphic file (type png)
 
 <use images/bussola1.png>
-Package pdftex.def Info: images/bussola1.png used on input line 192.
+Package pdftex.def Info: images/bussola1.png used on input line 170.
 (pdftex.def)             Requested size: 78.24377pt x 71.13089pt.
 
-<images/bussola2.png, id=389, 189.70876pt x 213.79875pt>
+<images/bussola2.png, id=324, 189.70876pt x 213.79875pt>
 File: images/bussola2.png Graphic file (type png)
 
 <use images/bussola2.png>
-Package pdftex.def Info: images/bussola2.png used on input line 192.
+Package pdftex.def Info: images/bussola2.png used on input line 170.
 (pdftex.def)             Requested size: 78.24713pt x 71.13123pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 192.
+LaTeX Font Info:    Try loading font information for U+msa on input line 170.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 192.
+LaTeX Font Info:    Try loading font information for U+msb on input line 170.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-) [10
+) [9
 
- <./images/bussola1.png (PNG copy)> <./images/bussola2.png>] [11
+ <./images/bussola1.png (PNG copy)> <./images/bussola2.png>] [10
 
-] [12
-
-] [13
+] [11
 
 ]
-<images/cam01.png, id=528, 353.32pt x 288.07625pt>
+<images/cam01.png, id=423, 353.32pt x 288.07625pt>
 File: images/cam01.png Graphic file (type png)
  <use images/cam01.png>
-Package pdftex.def Info: images/cam01.png used on input line 270.
+Package pdftex.def Info: images/cam01.png used on input line 216.
 (pdftex.def)             Requested size: 156.491pt x 99.58421pt.
 
-<images/cam02.png, id=529, 353.32pt x 288.07625pt>
+<images/cam02.png, id=424, 353.32pt x 288.07625pt>
 File: images/cam02.png Graphic file (type png)
  <use images/cam02.png>
-Package pdftex.def Info: images/cam02.png used on input line 270.
+Package pdftex.def Info: images/cam02.png used on input line 216.
 (pdftex.def)             Requested size: 156.491pt x 99.58421pt.
 
-[14
+[12
 
- <./images/cam01.png> <./images/cam02.png>] [15
+ <./images/cam01.png> <./images/cam02.png>]
+<images/algoritmo_navegacao.jpg, id=455, 2601.72pt x 1951.29pt>
+File: images/algoritmo_navegacao.jpg Graphic file (type jpg)
 
-]
-<images/algoritmo.jpg, id=595, 2601.72pt x 1951.29pt>
-File: images/algoritmo.jpg Graphic file (type jpg)
+<use images/algoritmo_navegacao.jpg>
+Package pdftex.def Info: images/algoritmo_navegacao.jpg used on input line 224.
 
-<use images/algoritmo.jpg>
-Package pdftex.def Info: images/algoritmo.jpg used on input line 304.
 (pdftex.def)             Requested size: 312.9472pt x 199.15996pt.
 
-Overfull \hbox (5.65733pt too wide) in paragraph at lines 304--304
+Overfull \hbox (5.65733pt too wide) in paragraph at lines 224--224
 [][]  
  []
 
-[16
+[13
 
- <./images/algoritmo.jpg>] [17
+ <./images/algoritmo_navegacao.jpg>] [14
 
-] [18
+] [15
 
-] [19
-
-] [20
-
-] [21
+] [16
 
 ]
 \tf@nav=\write6
@@ -1229,26 +1216,26 @@ Overfull \hbox (5.65733pt too wide) in paragraph at lines 304--304
 \tf@snm=\write8
 \openout8 = `apresentacao.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 416.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 416.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 278.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 278.
  (./apresentacao.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 416.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 416.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 278.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 278.
 Package rerunfilecheck Info: File `apresentacao.out' has not changed.
-(rerunfilecheck)             Checksum: A68DD28D58414020B5171D47D9870FAA;735.
+(rerunfilecheck)             Checksum: 86E210E1EF40FB31E624FCF2DCAE288F;529.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 416.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 278.
  ) 
 Here is how much of TeX's memory you used:
- 16143 strings out of 493633
- 297059 string characters out of 3148831
- 377866 words of memory out of 3000000
- 18970 multiletter control sequences out of 15000+200000
- 11572 words of font info for 42 fonts, out of 3000000 for 9000
+ 16098 strings out of 493633
+ 296653 string characters out of 3148831
+ 376859 words of memory out of 3000000
+ 18939 multiletter control sequences out of 15000+200000
+ 11216 words of font info for 41 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  49i,20n,57p,401b,567s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/
@@ -1257,10 +1244,10 @@ ts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmssi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb>
 
-Output written on apresentacao.pdf (21 pages, 2849408 bytes).
+Output written on apresentacao.pdf (16 pages, 2975147 bytes).
 PDF statistics:
- 821 PDF objects out of 1000 (max. 8388607)
- 760 compressed objects within 8 object streams
- 57 named destinations out of 1000 (max. 500000)
- 206 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 612 PDF objects out of 1000 (max. 8388607)
+ 560 compressed objects within 6 object streams
+ 43 named destinations out of 1000 (max. 500000)
+ 174 words of extra memory for PDF output out of 10000 (max. 10000000)
 

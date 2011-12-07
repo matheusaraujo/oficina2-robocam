@@ -1,0 +1,11 @@
+\beamer@endinputifotherversion {3.10pt}
+\select@language {brazil}
+\beamer@sectionintoc {1}{Introdu\IeC {\c c}\IeC {\~a}o}{3}{0}{1}
+\beamer@sectionintoc {2}{Projeto Mec\IeC {\^a}nico e Sensores}{5}{0}{2}
+\beamer@subsectionintoc {2}{1}{Rob\IeC {\^o}}{6}{0}{2}
+\beamer@subsectionintoc {2}{2}{CMUCam}{7}{0}{2}
+\beamer@subsectionintoc {2}{3}{Comunica\IeC {\c c}\IeC {\~a}o}{8}{0}{2}
+\beamer@subsectionintoc {2}{4}{B\IeC {\'u}ssola}{9}{0}{2}
+\beamer@sectionintoc {3}{Explora\IeC {\c c}\IeC {\~a}o}{10}{0}{3}
+\beamer@subsectionintoc {3}{1}{Track-color}{11}{0}{3}
+\beamer@subsectionintoc {3}{2}{Navega\IeC {\c c}\IeC {\~a}o}{13}{0}{3}

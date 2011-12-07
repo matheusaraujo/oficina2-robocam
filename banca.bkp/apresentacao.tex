@@ -20,7 +20,6 @@
 	\frame{\titlepage}
 
 	\frame{
-
 		\includegraphics[width=11cm,height=7cm]{images/robo}
 	}
 
@@ -54,55 +53,15 @@
 
 	}
 
-	\subsection{Visão Geral}
-
 	\frame{
 
 		\frametitle{Visão Geral}
 
 		\includegraphics[width=11cm, height=7cm]{images/robo_geral}
 
-	}
+	}	
 
-		\subsection{Objetivos}
-
-		\frame {
-
-			\frametitle{Objetivo Geral}
-
-			\begin{itemize}
-
-				\item Criar um robô capaz de reconhecer um objeto expecífico, e posteriormente explorar o ambiente onde se encontra, à procura do objeto.
-
-			\end{itemize}
-
-		}
-
-		\frame{
-
-			\frametitle{Objetivos Parciais}
-
-			\begin{itemize}
-
-				\item Sistema de Controle do Robô
-
-				\item Obter Informações da Bússola
-
-				\item Reconhecimento do Objeto a ser encontrado
-
-				\item Comunicação entre Arduino e Câmera.
-
-				\item Reconhecimento de Pontos de Interesse no ambiente.
-
-				\item Reconhecimento de Obstáculos
-
-				\item Algoritmo de Navegação
-
-			\end{itemize}
-
-		}
-
-	\section{Projeto Mecânico}
+	\section{Projeto Mecânico e Sensores}
 
 		\frame{
 
@@ -112,7 +71,7 @@
 
 				\item Robô construído no projeto \textbf{Robô Explorador de Labirintos 2D}, Bruno Meneguele, Fernando Padilha e Vinicius Arcanjo, apresentado a esta disciplina no primeiro semestre de 2011.
 
-				\item Foram reutilizados: chassi, motor, caixa de redução, rodas, \textit{Arduino}. 
+				\item Foram reutilizados: chassi, motor, caixa de redução, rodas, \textit{Arduíno}. 
 
 				\item Os sensores de luz infravermelha foram substituídos pela câmera.
 
@@ -138,15 +97,13 @@
 				\begin{itemize}
 
 
-					\item O projeto do robô está centrado no \textit{Arduino} - Ele é o responsável por receber as decisões tomadas pela câmera e atuar sobre os sistemas do robô.
+					\item O projeto do robô está centrado no \textit{Arduíno} - Ele é o responsável por receber as decisões tomadas pela câmera e atuar sobre os sistemas do robô.
 
 					\item O acionamento dos motores é feito através da Ponte H, que por sua vez é ativada por PWM.
 
 				\end{itemize}
 
 			}
-
-	\section{Sensores}
 			
         \subsection{CMUCam}
 
@@ -167,11 +124,32 @@
 
 					\item Arquitetura baseada em \textit{ARM7TDMI}, Microprocessador \textit{Philips LPC2106}
 
+
 				\end{itemize}
 
 			}
                 
-		
+
+		\subsection{Comunicação}
+
+			\frame{
+
+				\frametitle{Comunicação}
+
+				\begin{itemize}
+
+
+					\item Os algoritmos de visão e navegação são executados na \textit{CMUCam} e devem ser enviados para o \textit{Arduíno}.
+
+					\item Foi utilizada comunicação serial assíncrona \textit{full-duplex} entre as duas plataformas.
+
+					\item A \textit{CMUCam} envia um \textit{byte} contendo o movimento que deve ser executado pelo robô para o \textit{Arduíno} que o interpreta e executa.
+
+
+				\end{itemize}
+
+			}
+			
 		\subsection{Bússola}
 
 		\frame{
@@ -190,27 +168,7 @@
 			\end{itemize}
 
 		}
-
-		\subsection{Comunicação}
-
-			\frame{
-
-				\frametitle{Comunicação}
-
-				\begin{itemize}
-
-
-					\item Os algoritmos de visão e navegação são executados na \textit{CMUCam}, que deve enviar comandos de movimento para o \textit{Arduino}.
-
-					\item Foi utilizada comunicação serial assíncrona \textit{full-duplex} entre as duas plataformas.
-
-					\item A \textit{CMUCam} envia um \textit{byte} contendo o movimento que deve ser executado pelo robô para o \textit{Arduino} que o interpreta e executa.
-
-
-				\end{itemize}
-
-			}
-
+		
     	\section{Exploração}
 
 	
@@ -239,21 +197,9 @@
 
 			\begin{itemize}
 
-				\item Funcionalidade presente na Biblioteca da \textit{CMUCam}.
+				\item Programa presente na Biblioteca da \textit{CMUCam}.
 
-				\item Recebe uma faixa RGB definida e retorna:
-
-				\begin{itemize} 
-				
-					\item As coordenadas do retângulo que contém os \textit{pixels} daquela cor na imagem.
-				
-					\item O centróide de cor.
-					
-					\item A densidade de \textit{pixels} daquela cor presentes na imagem.
-
-					\item O número de \textit{pixels} daquela cor presentes na imagem.
-
-				\end{itemize}
+				\item A função recebe uma faixa RGB definida e retorna as coordenadas de um retângulo com o centróide e a densidade de \textit{pixels} daquela cor presentes na imagem.
 
 			\end{itemize}
 
@@ -270,6 +216,12 @@
 		}
 
 		\subsection{Navegação}
+	
+		\frame{
+		
+			\includegraphics[width=11cm, height=7cm]{images/algoritmo_navegacao}
+			
+		}
 
 		\frame{
 
@@ -279,56 +231,7 @@
 
 				\item O algoritmo de Exploração recebe as informações da função \textit{track-color} e toma a decisão de movimento do robô.
 
-				\begin{itemize}
-
-					\item Se a bola não foi localizada na imagem, girar para a esquerda.
-
-					\item Senão, se o centróide está muito para a esquerda, girar para a direita.
-
-					\item Senão, se o centróide está muito para a direita, girar para a esquerda.
-
-					\item Senão, se o número de pixels for muito baixo, ir para a frente.
-
-					\item Senão, parar.
-
-				\end{itemize}
-
 			\end{itemize}
-
-		}
-		
-		\frame{
-
-			\includegraphics[width=11cm, height=7cm]{images/algoritmo}
-
-		}
-
-	\section{Conclusão}
-
-		\frame{
-
-			\frametitle{Dificuldades Encontradas}
-
-				\begin{itemize}
-
-					\item \textit{CMUCam}
-
-					\begin{itemize}
-
-						\item Atraso com compra e entrega.
-
-						\item Falta de Documentação.
-
-						\item Falta de Suporte.
-
-						\item Informações antigas, desatualizadas e/ou inexatas da comunidade.
-
-					\end{itemize}
-
-					\item Comunicação Serial entre Arduino e \textit{CMUCam}
-
-
-				\end{itemize}
 
 		}
 
