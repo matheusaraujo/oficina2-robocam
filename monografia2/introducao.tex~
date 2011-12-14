@@ -4,7 +4,7 @@ Robôs autônomos são aqueles capazes de realizar um objetivo desejado em um de
 
 Para atingir seus objetivos, esses robôs utilizam sensores para percepção do ambiente e algoritmos inteligentes para tomada de decisões.
 
-O robô construído pela equipe pode ser visto na Figura \ref{fig_int_1}.
+O robô construído pela equipe pode ser visto na Figura \ref{fig_int_1}
 
 \begin{figure}[h!]
     \center

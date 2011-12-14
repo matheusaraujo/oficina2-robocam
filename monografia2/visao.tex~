@@ -20,4 +20,4 @@ Obstáculos podem ser identificados, na imagem, através do histograma da imagem
 
 \section{Correção de desvios}
 
-De forma a corrigir eventuais desvios na movimentação do robô, causados por uma diferença de rotação entre as duas rodas, o sistema também deve identificar, na imagem, através da detecção de bordas e do mapa de cores, alguns objetos ou bordas de destaque, e caso o movimento seja muito irregular, corrigir sua rota.
+De forma a corrigir eventuais desvios na movimentação do robô, causados por uma diferença de rotação entre as duas rodas, o sistema também deve identificar, na imagem, através da detecção de bordas e do mapa de cores, alguns objetos ou bordas de destaque, e caso saiam muito do lugar esperado para eles, corrigir sua rota.

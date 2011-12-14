@@ -1,0 +1,24 @@
+\chapter{Descritivo}
+
+Esse apêndice tem como intuito descrever de maneira sucinta o que foi realizado durante o projeto, e pode ser utilizado em trabalhos futuros como referência rápida.
+
+O objetivo inicial da equipe era construir um robô que pudesse se localizar em um ambiente controlado e conseguisse encontrar um objeto especificado; durante o projeto, a bola laranja foi definida como o objeto a ser pesquisado.
+
+Houve algumas dificuldades na aquisição da câmera, inicialmente, a equipe optou pela \textit{CMUCam1}, por atender os requisitos do projeto e ser mais barata. No entanto, nenhum fornecedor da câmera possuia o modelo mais simples da \textit{CMUCam}, o mesmo aconteceu com a \textit{CMUCam2}, sendo necessário então adquirir a \textit{CMUCam3} junto a um fornecedor em Hong Kong.
+
+A entrega da câmera atrasou devido a dos funcionários dos Correios no Brasil.
+
+Enquanto a câmera não chegava, a equipe trabalhou com o robô que já havia sido construído, e implementou a biblioteca de controle do mesmo. Nesse período foram feitos os testes com a bússola também. A equipe conseguiu integrá-la ao \textit{Arduino} e chegou a fazer alguns testes de movimento do robô a partir de informações que eram obtidas através dela.
+
+Com a câmera em mãos, foram feitos os testes dos algoritmos de reconhecimento da \textit{CMUCam3}. O programa exemplo usado para identificação foi o \textit{simple-track-color}. Este programa é capaz de, a partir de uma faixa RGB, identificar dentro da imagem onde está a cor e retorna como parâmetro dois pontos de um retângulo onde a cor está contida, o centróide da cor, i.e., o ponto onde há maior concentração daquela cor, e a densidade da cor dentro daquele retângulo.
+
+Com um algoritmo rudimentar de identificação funcionando, a equipe se concentrou em desenvolver o sistema de comunicação \textit{Arduino-CMUCam}. Fisicamente, foi utilizada a porta serial da \textit{CMUCam}, a mesma que ela utiliza para comunicar com o computador, e os pinos 0 e 1 do \textit{Arduino}. Nos testes feitos pela equipe, aparentemente não havia uma relação direta entre o que era enviado pela câmera e o que era recebido pelo \textit{Arduino}; no entanto, havia a integridade da informação. Ou seja, o que era enviado pela câmera era sempre recebido da mesma forma pelo \textit{Arduino}, então a equipe levantou uma tabela de relação e implementou o sistema de comunicação.
+
+Quando os dois módulos descritos anteriormente já estavam funcionando, o prazo de entrega do projeto já estava muito próximo e a equipe então reduziu o escopo do projeto e o objetivo passou a ser identificar o objeto e fazer o robô se movimentar até ele. Para isso, foi elaborado um algoritmo simples de navegação. 
+
+Esse algoritmo movimenta o robô em direção à bola sem no entanto evitar obstáculos. O robô para quando a bola está suficientemente próxima. Os parâmetros de decisão de parada, virar para a esquerda ou direita, movimentar para a frente foram obtidos de maneira experimental. 
+i
+Todo o código desenvolvido pela equipe está disponível no repositório: $$ http://github.com/matheusaraujo/oficina2-robocam $$
+
+Como projetos futuros, a equipe sugere implementar um algoritmo inteligente de navegação e aprimorar a percepção, utilizando outras informações além da cor do objeto, como detecção de bordas e histograma também. Com relação ao projeto mecânico do robô, acredita-se que foi atingido um nível satisfatório, precisando apenas alguns ajustes pequenos principalmente com relação aos diversos fios do robô que eventualmente podem atrapalhar os movimentos. Outro ponto a ser explorado é a integração das informações da bússola ao algoritmo de exploração.
+

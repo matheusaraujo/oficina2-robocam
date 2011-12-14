@@ -1,6 +1,6 @@
 \chapter{Conclusão}
 
-No atual momento do projeto, a comunicação entre \textit{CMUcam3} e \textit{Arduino} ainda não foi implementada, por esse motivo ainda não foi possível fazer os testes de exploração e identificação do objeto.
+No atual momento do projeto, a comunicação entre \textit{CMUcam3} e \textit{Arduíno} ainda não foi implementada, por esse motivo ainda não foi possível fazer os testes de exploração e identificação do objeto.
 
 Analisando a estrutura do robô desde a parte mecânica, eletrônica e as estratégias para exploração e localização do objeto encontrado, espera-se que o robô consiga encontrar um objeto especifico e de destaque dentro de um ambiente pequeno, com as dimensões 168,2 cm por 118,9 cm.
 

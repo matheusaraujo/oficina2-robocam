@@ -37,11 +37,11 @@ Em conversa com o professor Hugo, optamos pela \textit{CMUcam1}; uma vez que ela
 
 Conseguimos com a equipe que desenvolveu o Robô Explorador de Labirintos 2D nessa mesma disciplina, em 2011-01, o robô emprestado. Segundo a Equipe, uma das Pontes H do robô apresenta problemas, precisaremos solucioná-lo. 
 
-Precisamos agora decidir e conseguir o microcontrolador para o Robô. Os da plataforma \textit{Arduino} apresentam possibilidade de comunicação com a câmera via software e pela familiaridade dos membros da equipe podem se tornar uma boa escolha.
+Precisamos agora decidir e conseguir o microcontrolador para o Robô. Os da plataforma \textit{Arduíno} apresentam possibilidade de comunicação com a câmera via software e pela familiaridade dos membros da equipe podem se tornar uma boa escolha.
 
 \textbf{5 de Setembro}
 
-Pegamos o robô com a equipe do semestre passado. Sem problemas com a ponte H, o robô não apresenta nenhum problema mecânico ou elétrico-eletrônico. Estamos utilizando o mesmo microcontrolador da equipe, um \textit{ATMEGA 328P} em  uma placa \textit{Arduino Duemilanove}. 
+Pegamos o robô com a equipe do semestre passado. Sem problemas com a ponte H, o robô não apresenta nenhum problema mecânico ou elétrico-eletrônico. Estamos utilizando o mesmo microcontrolador da equipe, um \textit{ATMEGA 328P} em  uma placa \textit{Arduíno Duemilanove}. 
 
 \textbf{ 7 de Setembro}
 
@@ -63,19 +63,19 @@ Escrita do relatório de Qualificação, entregue aos professores no dia 28. Per
 
 \textbf{28 de Setembro}
 
-Entrega da Qualificação aos professores da Disciplina. Conseguimos emprestado com o professor Hugo duas bússolas \textit{Dinsmore}, uma digital e outra analógica. Durante a próxima semana faremos os testes para definir qual iremos usar. A bússola será integrada ao sistema através da placa do \textit{Arduino}.
+Entrega da Qualificação aos professores da Disciplina. Conseguimos emprestado com o professor Hugo duas bússolas \textit{Dinsmore}, uma digital e outra analógica. Durante a próxima semana faremos os testes para definir qual iremos usar. A bússola será integrada ao sistema através da placa do \textit{Arduíno}.
 
 \textbf{30 de Setembro}
 
-Foram encontrados problemas com o interfaceamento entre a bússola e o Arduino devido a diferentes níveis de tensão e corrente, será necessário construir um conversor DC-DC para fazer a integração.
+Foram encontrados problemas com o interfaceamento entre a bússola e o arduíno devido a diferentes níveis de tensão e corrente, será necessário construir um conversor DC-DC para fazer a integração.
 
 \textbf{6 de Outubro}
 
-Após orientação do professor Hugo e pesquisa de outros projetos, fizemos o primeiro experimento com a bússola e obtivemos 5 [V] na saída, o que possibilita interfaceamento direto com o Arduino. 
+Após orientação do professor Hugo e pesquisa de outros projetos, fizemos o primeiro experimento com a bússola e obtivemos 5 [V] na saída, o que possibilita interfaceamento direto com o arduíno. 
 
 \textbf{12 de Outubro}
 
-Construímos um \textit{shield} para a bússola, possibilitando conectá-la ao Arduino.
+Construímos um \textit{shield} para a bússola, possibilitando conectá-la ao Arduíno.
 
 \textbf{14 de Outubro}
 
@@ -83,7 +83,7 @@ A câmera foi finalmente enviada de Hong Kong. A previsão de entrega é de um m
 
 \textbf{15 de Outubro}
 
-Conectamos o \textit{shield} da bússola ao Arduino; tivemos alguns problemas de mau contato com os cabos, mas o robô é capaz de interpretar as informações fornecidas pela bússola e segue os comandos que lhe foram dados. 
+Conectamos o \textit{shield} da bússola ao Arduíno; tivemos alguns problemas de mau contato com os cabos, mas o robô é capaz de interpretar as informações fornecidas pela bússola e segue os comandos que lhe foram dados. 
 
 \textbf{18 de Outubro}
 
@@ -101,45 +101,8 @@ Conseguimos compilar e gravar os códigos de exemplo na câmera.
 
 \textbf{2 de Novembro}
 
-Estamos estudando a comunicação da \textit{CMUCam} com o \textit{Arduino}.
+Estamos estudando a comunicação da \textit{CMUCam} com o \textit{Arduíno}.
 
 \textbf{9 de Novembro}
 
 Concentramos nossas atenções na finalização da primeira versão da monografia.
-
-\textbf{16 de Novembro}
-
-Entrega da primeira versão da monografia, os trabalhos com o robô serão retomados a partir de agora.
-
-\textbf{23 de Novembro}
-
-Estamos testando o algoritmo de detecção de objetos, usamos como exemplo o projeto \textit{simple-track-color} da biblioteca de projetos da \textit{CMUCam}, ele é capaz de identificar dentro da imagem a presença de uma faixa de cores definida como parâmetro. Seu retorno é o retângulo e o centróide na imagem onde a faixa de cores definida foi encontrada.
-
-Os testes com a \textit{VirtualCam} estão funcionando, no entanto com a câmera na real ainda não.
-
-\textbf{25 de Novembro}
-
-O código do \textit{simple-track-color} parecia conter alguns erros, no fórum de discussão da \textit{CMUCam} conseguimos uma correção e ele passou a funcionar também com a câmera real. Estamos levantando os mapas de cores da bola laranja.
-
-\textbf{28 de Novembro}
-
-Estamos fazendo os testes com a comunicação entre \textit{Arduino} e \textit{CMUCam}, estamos enviando comandos da câmera para o \textit{Arduino}, mas ainda não conseguimos um método eficiente de identificar o que ele está recebendo.
-
-\textbf{30 de Novembro}
-
-A comunicação está funcionando! Estamos enviando caracteres 'a', 'b', 'c', 'd' e 'e' da câmera para o \textit{Arduino}, mas não conseguimos identificar uma relação entre o que foi enviado e o que está recebido \textit{Arduino}, 79, 39, 78, 19, 77, respectivamente.
-
-\textbf{2 de Dezembro}
-
-Com a identificação do objeto funcionando e a comunicação também, iremos começar os testes reais com o robô. Como suporte para a câmera no robô foi utilizado um pedaço de madeira. 
-
-\textbf{5 de Dezembro}
-
-O robô funciona!!! Não é o que havíamos planejado no começo do projeto, mas conseguimos fazer com que ele identifique a bola laranja e se movimente até ela. 
-
-Começamos a preparar a apresentação.
-
-
-\textbf{7 de Dezembro}
-
-Apresentação da banca final.

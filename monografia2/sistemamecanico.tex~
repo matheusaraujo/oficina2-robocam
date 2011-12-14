@@ -292,7 +292,7 @@ Classe para produzir a representação necessária nos indicadores do robô.
 
 Uma vez que todas as ações do robô estão definidas nas classes anteriormente citadas, a classe \textit{Robot} possui objetos das mesmas e sua tarefa é chamar as funções nos momentos adequados. 
 
-No programa principal do \textit{Arduino} há um objeto dessa classe que possui um método principal que monitora a comunicação serial esperando os comandos da \textit{CMUCam} através da classe \textit{CommSerial}, quando ele recebe um comando, dispara as funções das classes imediatamente abaixo.
+No programa principal do \textit{Arduino} há um objeto dessa classe que possui um método principal que monitora a comunicação serial esperando para os comandos da \textit{CMUCam} através da classe \textit{CommSerial}, quando ele recebe um comando, dispara as funções das classes imediatamente abaixo.
 
 \subsection{Constants}
 

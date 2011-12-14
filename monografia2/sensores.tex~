@@ -10,7 +10,7 @@ A bússola utilizada no projeto é a \textit{Dinsmore Sensor Modelo \# 1490} \ci
 
 Foi necessário construir um \textit{shield}, placa de suporte para a bússola conectada ao \textit{Arduino}, que possibilitasse a conexão da Bússola com o restante do sistema. O circuito utilizado é apresentado na figura \ref{sen_fig01} e foi baseado no trabalho do \textit{Autonomous Vehicle Team} do \textit{College of New Jersey} \cite{newjersey}.
 
-Internamente a bússola funciona como um transistor coletor aberto NPN e fornece sinais 0 ou 5V, TTL, \cite{bussola}, captados nos cátodos dos diodos, para as entradas digitais do \textit{Arduino}, sendo alimentada com 5V através do \textit{Arduino} também.
+Internamente a bússola funciona como um transistor coletor aberto NPN e fornece sinais 0 ou 5V, TTL, \cite{bussola}, captados nos catodos dos diodos, para as entradas digitais do \textit{Arduino}, sendo alimentada com 5V através do \textit{Arduino} também.
 
 \begin{figure}[h!]
     \center

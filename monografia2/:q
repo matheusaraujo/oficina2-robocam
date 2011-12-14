@@ -1,0 +1,24 @@
+\chapter{Descritivo}
+
+Esse apêndice tem como intuito descrever de maneira sucinta o que foi realizado durante o projeto, e pode ser utilizado em trabalhos futuros como referência rápida.
+
+O objetivo inicial da equipe era construir um robô que pudesse se localizar em um ambiente controlado e conseguisse encontrar um objeto especificado; durante o projeto, a bola laranja foi definida como o objeto a ser pesquisado.
+
+Houve algumas dificuldades na aquisição da câmera, inicialmente, a equipe optou pela \textit{CMUCam1}, por atender os requisitos do projeto e ser mais barata. No entanto, nenhum fornecedor da câmera possuia o modelo mais simples da \textit{CMUCam}, o mesmo aconteceu com a \textit{CMUCam2}, sendo necessário então adquirir a \textit{CMUCam3} junto a um fornecedor em Hong Kong.
+
+A entrega da câmera atrasou devido a dos funcionários dos Correios no Brasil.
+
+Enquanto a câmera não chegava, a equipe trabalhou com o robô que já havia sido construído, e implementou a biblioteca de controle do mesmo. Nesse período foram feitos os testes com a bússola também. A equipe conseguiu integrá-la ao \textit{Arduino} e chegou a fazer alguns testes de movimento do robô a partir de informações que eram obtidas através dela.
+
+Com a câmera em mãos, foram feitos os testes dos algoritmos de reconhecimento da \textit{CMUCam3}. O programa exemplo usado para identificação foi o \textit{simple-track-color}. Este programa é capaz de, a partir de uma faixa RGB, identificar dentro da imagem onde está a cor e retorna como parâmetro dois pontos de um retângulo onde a cor está contida, o centróide da cor, i.e., o ponto onde há maior concentração daquela cor, e a densidade da cor dentro daquele retângulo.
+	
+Devido a problemas encontrados no decorrer do projeto, como a greve dos correios e problemas na comunicação entre o \textit{Arduino} e a \textit{CMUCam}, não foi possível alcançar todos os objetivos pré-estabelecidos pela equipe.
+ 
+Portanto, diminuímos o escopo do projeto e nos focamos em fazer o robô seguir uma bola laranja, resultado que efetivamente conseguimos. A parte mecânica do robô está funcional precisando apenas ser ajustada para conter todos os fios utilizados no robô, pois alguns fios podem atrapalhar na movimentação das rodas.
+
+A comunicação entre arduíno e a câmera ainda contem erros, pois quando um valor é enviado da câmera para o arduíno o valor recebido no arduíno não é equivalente ao enviado pela câmera.  Não conseguimos descobrir a causa desse erro, mas como a saída da CMUcam3 e a entrada do arduíno sempre eram as mesmas para determinados sinais, utilizamos isso como uma forma rudimentar de comunicação entre ambos. Além disso, só foi implementada comunicação da câmera para o arduíno.
+
+Pela parte de navegação foi criado um código simples para que o robô seguisse a bola. Dependendo de como a bola é visualizada pela câmera, o robô vai procurar se aproximar e tentar centraliza-la na imagem que ele vê. 
+	
+
+

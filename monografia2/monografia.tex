@@ -76,6 +76,12 @@ Por emprestar o robô e pelos diversos esclarecimentos (muitas vezes sobre assun
 À Professora Myriam nosso agradecimento por aceitar o desafio de nos orientar e a atenção dispensada. 
 
 Aos Professores Hugo Vieira e Mário Sérgio pela oportunidade sem par de aprendizado.
+
+Aos Professores João Fabro e Celso Kaestner por permitirem o uso das dependências e recursos do Laboratório de Arquitetura de Computadores para a realização do projeto.
+
+Aos colegas Lucas Campiolo Paiva e Cláudio Akio pela colaboração ocasional com o projeto.
+
+Aos marceneiros do Almoxarifado da UTFPR pela ajuda com a construção do suporte da câmera.
  
 \end{agradecimentos}
 
@@ -96,12 +102,12 @@ Aos Professores Hugo Vieira e Mário Sérgio pela oportunidade sem par de aprend
 
 %resumo
 \begin{resumo}
-Neste projeto foi desenvolvido um robô explorador ambientes capaz de encontrar um objeto pré-definido em um ambiente pequeno, ou explora todo o ambiente caso não seja capaz de encontrá-lo. Para tal usamos, como sensor, principalmente, uma câmera, a \textit{CMUCam3}, desenvolvida pela \textit{Carmegie Mellon University}. Uma bússola também é utilizada como sensor auxiliar, para obter a direção do robô. O projeto mecânico do robô foi desenvolvido em \cite{Robo2d}. Um mapa do ambiente é criado e armazenado, com uma representação local dos lugares visitados.
+Neste projeto foi realizada uma tentativa de desenvolver um robô explorador ambientes capaz de encontrar um objeto pré-definido em um ambiente controlado, ou explorar todo o ambiente caso não seja capaz de encontrá-lo. Posteriormente, o escopo do projeto foi alterado para um robô capaz de localizar um objeto em seu campo de visão e seguí-lo, como passo inicial para a construção de um robô explorador. Para tal usamos como sensor principal uma câmera, a \textit{CMUCam3}, desenvolvida pela \textit{Carmegie Mellon University}. Uma bússola também foi estudada como sensor auxiliar, para obter a direção do robô. A versão inicial do robô foi desenvolvido em \cite{Robo2d}.
 \end{resumo}
 
 %abstract
 \begin{abstract}
-An explorer robot is developed in this project, which is capable of both, finding a predefined object on a small environment, and exploring the whole environment if it can't find it. A camera used as the main senso,the \textit{CMUCam3}, developed by \textit{Carmegie Mellon University}. A compass was also used as an auxiliary sensor, in order to obtain the direction of the robot. The mechanical project of the Robot is developed in \cite{Robo2d}. A map of the environment is created an stored, with a local representation of visited places.
+An attempt to develop an explorer robot is made in this project, which would be capable of both finding a predefined object on a small, controlled, environment, and exploring the whole environment if it can't find it. Later the scope of the project was changed to a robot capable of finding an object at his line of vision and following it, as a inicial step in order to build an explorer robot.  A camera was used as the main sensor, the \textit{CMUCam3}, developed by \textit{Carmegie Mellon University}. A compass would also be used as an auxiliary sensor, in order to obtain the direction of the robot. The initial version of the Robot is developed in \cite{Robo2d}.
 \end{abstract}
 
 % listas (opcionais, mas recomenda-se a partir de 5 elementos)
@@ -129,7 +135,7 @@ An explorer robot is developed in this project, which is capable of both, findin
 \include{introducao}
 
 % ================ %
-% SISTEMA MECÂNICO %
+% DESCRIÇÃO DO ROBÔ %
 % ================ %
 
 \include{sistemamecanico}
@@ -165,6 +171,8 @@ An explorer robot is developed in this project, which is capable of both, findin
 \apendice
 
 \include{cadernodebordo}
+
+\include{descritivo}
 
 %\chapter{Nome do Ap\^endice}
 

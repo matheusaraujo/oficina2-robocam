@@ -4,7 +4,7 @@ Para o robô encontrar o objeto anteriormente especificado ele deve saber se loc
 
 De acordo com \cite{conradt}, a representação global procura descrever o ambiente da maneira mais fiel à realidade possível, indicando o mapa a partir de seus nodos e suas conexões, retendo o máximo de informação possível para conseguir manter uma consistência espacial global conforme o mapa vai sendo construído. A grande desvantagem da representação global é a necessidade de se reter e processar toda essa informação para criar-se o mapa, portanto conforme a quantidade de nodos aumenta, o mapa em si aumenta e a complexidade computacional também aumenta consideravelmente.
 
-Para o projeto atual, a equipe optou por utilizar a representação local, pois a abordagem global se torna ineficiente devido a sua complexidade computacional envolvida para manter a consistência do mapa. A abordagem local possibilita o escalonamento do sistema para permitir a ele operar em ambientes maiores.
+Para o projeto atual, a equipe optou por utilizar a representação local, pois a abordagem global se torna ineficiente devido a sua complexidade computacional envolvida para manter a consistência do mapa. A abordagem local permite o escalonamento do sistema para permitir a ele operar em ambientes maiores.
 
 \section{Construção do mapa}
 

@@ -8,6 +8,7 @@ A level-1 auxiliary file: visao.aux
 A level-1 auxiliary file: navegacao.aux
 A level-1 auxiliary file: conclusao.aux
 A level-1 auxiliary file: cadernodebordo.aux
+A level-1 auxiliary file: descritivo.aux
 The style file: abnt-alf.bst
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
@@ -33,7 +34,7 @@ Reallocated glb_str_end (elt_size=8) to 20 items from 10.
 +---------------------------------------------------------+
 You've used 13 entries,
             6523 wiz_defined-function locations,
-            1216 strings with 10349 characters,
+            1217 strings with 10363 characters,
 and the built_in function-call counts, 7315 in all, are:
 = -- 558
 > -- 206

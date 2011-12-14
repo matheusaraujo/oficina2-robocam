@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2012/dev/Arch Linux) (format=pdflatex 2011.11.17)  18 NOV 2011 00:07
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2012/dev/Arch Linux) (format=pdflatex 2011.11.30)  14 DEC 2011 11:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -557,7 +557,7 @@ Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
 ) (./monografia.aux
 (./introducao.aux) (./sistemamecanico.aux) (./sensores.aux) (./visao.aux)
-(./navegacao.aux) (./conclusao.aux) (./cadernodebordo.aux))
+(./navegacao.aux) (./conclusao.aux) (./cadernodebordo.aux) (./descritivo.aux))
 \openout1 = `monografia.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
@@ -698,54 +698,79 @@ Underfull \hbox (badness 6876) in paragraph at lines 63--63
 
 
 ]
-Overfull \hbox (4.33916pt too wide) in paragraph at lines 88--88
-\OT1/ptm/m/n/12 EX-PLO-RA-DOR DE AM-BI-EN-TES. 31[] f. Mo-no-gra-fia -- De-par-
-ta-mento Acad[]emico de Eletr[]onica,
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 91.
+ (/usr/share/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 91.
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--95
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--99
+
  []
 
 [2
 
 
-] [3
+]
+Overfull \hbox (4.33916pt too wide) in paragraph at lines 104--104
+\OT1/ptm/m/n/12 EX-PLO-RA-DOR DE AM-BI-EN-TES. 35[] f. Mo-no-gra-fia -- De-par-
+ta-mento Acad[]emico de Eletr[]onica,
+ []
+
+[3
+
+
+] [4
 
 
 ] (./monografia.lof)
 \tf@lof=\write3
 \openout3 = `monografia.lof'.
 
- [4
+ [5
 
 ] (./monografia.lot)
 \tf@lot=\write4
 \openout4 = `monografia.lot'.
 
- [5
+ [6
 
-] (./monografia.toc
-[6
-
-
-])
+] (./monografia.toc)
 \tf@toc=\write5
 \openout5 = `monografia.toc'.
 
- [7]
+
+[7
+
+
+]
 \openout2 = `introducao.aux'.
 
  (./introducao.tex
 Cap\'{\i }tulo 1.
-[9
+<imagens/foto_robo.jpg, id=35, 2601.72pt x 1951.29pt>
+File: imagens/foto_robo.jpg Graphic file (type jpg)
+
+<use imagens/foto_robo.jpg>
+Package pdftex.def Info: imagens/foto_robo.jpg used on input line 11.
+(pdftex.def)             Requested size: 390.24117pt x 292.68086pt.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 12.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 12.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 12.
+ [9
 
 
 
-]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 30.
- (/usr/share/texmf-dist/tex/latex/psnfss/omsptm.fd
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 30.
-) [10]
+ <./imagens/foto_robo.jpg>] [10]) [11]
 \openout2 = `sistemamecanico.aux'.
 
 
@@ -757,96 +782,99 @@ Overfull \hbox (6.02739pt too wide) in paragraph at lines 7--8
 o, in-cluindo ro-das, caixa de redu[][]ao
  []
 
-<imagens/robo_geral.png, id=41, 1050.92625pt x 716.6775pt>
+<imagens/robo_geral.png, id=45, 1050.92625pt x 716.6775pt>
 File: imagens/robo_geral.png Graphic file (type png)
 
 <use imagens/robo_geral.png>
 Package pdftex.def Info: imagens/robo_geral.png used on input line 15.
 (pdftex.def)             Requested size: 367.8297pt x 250.84088pt.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 16.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 16.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 16.
- [11
+ [12
 
 
 
  <./imagens/robo_geral.png (PNG copy)>]
-[12] [13] <imagens/processo_arduino.png, id=52, 828.09375pt x 273.02pt>
+[13] [14] <imagens/processo_arduino.png, id=56, 828.09375pt x 273.02pt>
 File: imagens/processo_arduino.png Graphic file (type png)
 
 <use imagens/processo_arduino.png>
-Package pdftex.def Info: imagens/processo_arduino.png used on input line 97.
+Package pdftex.def Info: imagens/processo_arduino.png used on input line 120.
 (pdftex.def)             Requested size: 414.04587pt x 136.50966pt.
 
-Overfull \hbox (2.25935pt too wide) in paragraph at lines 102--103
-[]\OT1/ptm/m/n/12 O \OT1/ptm/m/it/12 Ardu[]^^Pno Du-e-mi-la-nove \OT1/ptm/m/n/1
-2 pos-sui um mi-cro-pro-ces-sa-dor \OT1/ptm/m/it/12 AT-MEGA328P\OT1/ptm/m/n/12 
-, sua programa[][]ao
+Overfull \hbox (4.2634pt too wide) in paragraph at lines 125--126
+[]\OT1/ptm/m/n/12 O \OT1/ptm/m/it/12 Ar-duino Du-e-mi-la-nove \OT1/ptm/m/n/12 p
+os-sui um mi-cro-pro-ces-sa-dor \OT1/ptm/m/it/12 AT-MEGA328P\OT1/ptm/m/n/12 . S
+ua programa[][]ao
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 125.
-[14 <./imagens/processo_arduino.png (PNG copy)>] [15] [16]
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 148.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[15 <./imagens/processo_arduino.png (PNG copy)>] [16]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 203.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 196.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 203.
- [17]
-<imagens/diagrama_classe_robot.png, id=66, 650.43pt x 218.8175pt>
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 196.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[17] [18] <imagens/diagrama_classe_robot.png, id=71, 650.43pt x 218.8175pt>
 File: imagens/diagrama_classe_robot.png Graphic file (type png)
 
 <use imagens/diagrama_classe_robot.png>
 Package pdftex.def Info: imagens/diagrama_classe_robot.png used on input line 2
-47.
+70.
 (pdftex.def)             Requested size: 325.2142pt x 109.40848pt.
- [18 <./imagens/diagrama_classe_robot.png (PNG copy)>]) [19]
+ [19 <./imagens/diagrama_classe_robot.png (PNG copy)>]) [20]
 \openout2 = `sensores.aux'.
 
  (./sensores.tex
 Cap\'{\i }tulo 3.
-<imagens/circuito_bussola.png, id=74, 975.645pt x 417.56pt>
+<imagens/circuito_bussola.png, id=78, 975.645pt x 417.56pt>
 File: imagens/circuito_bussola.png Graphic file (type png)
 
 <use imagens/circuito_bussola.png>
 Package pdftex.def Info: imagens/circuito_bussola.png used on input line 17.
 (pdftex.def)             Requested size: 390.25108pt x 167.02103pt.
- [20
+ [21
 
 
 
  <./imagens/circuito_bussola.png>])
-[21]
+[22]
 \openout2 = `visao.aux'.
 
  (./visao.tex
 Cap\'{\i }tulo 4.
-<imagens/polly_sample.jpg, id=81, 414.54875pt x 332.24126pt>
+<imagens/polly_sample.jpg, id=85, 414.54875pt x 332.24126pt>
 File: imagens/polly_sample.jpg Graphic file (type jpg)
 
 <use imagens/polly_sample.jpg>
-Package pdftex.def Info: imagens/polly_sample.jpg used on input line 17.
+Package pdftex.def Info: imagens/polly_sample.jpg used on input line 16.
 (pdftex.def)             Requested size: 414.54773pt x 332.24043pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [22
+) [23
 
 
 
-] [23 <./imagens/polly_sample.jpg>]
+] [24 <./imagens/polly_sample.jpg>]
 \openout2 = `navegacao.aux'.
 
  (./navegacao.tex
 Cap\'{\i }tulo 5.
-[24
+[25
 
 
 
-]) [25]
+]) [26]
 \openout2 = `conclusao.aux'.
 
  (./conclusao.tex
@@ -857,11 +885,11 @@ Overfull \hbox (4.69931pt too wide) in paragraph at lines 3--4
 fa-zer os tes-tes de explora[][]ao e identifica[][]ao
  []
 
-) [26
+) [27
 
 
 
-] (./monografia.bbl) [27
+] (./monografia.bbl) [28
 
 
 ]
@@ -869,34 +897,50 @@ fa-zer os tes-tes de explora[][]ao e identifica[][]ao
 
  (./cadernodebordo.tex
 Apendice A.
-[28
+[29
 
 
-] [29] [30]) [31] AED: lastpage setting LastPage 
+] [30] [31] [32]) [33]
+\openout2 = `descritivo.aux'.
+
+ (./descritivo.tex
+Apendice B.
+[34
+
+
+
+])
+Overfull \hbox (20.9311pt too wide) in paragraph at lines 23--175
+[]\OT1/ptm/m/n/12 Como pro-je-tos fu-tu-ros, a equipe su-gere im-ple-men-tar um
+ al-go-ritmo in-te-li-gente de navega[][]ao
+ []
+
+[35] AED: lastpage setting LastPage 
 +-------------------------------------------------------------------+
 | Comentario, sugestao ou critica sobre o abnTeX? Entre em contato: |
 |                  http://abntex.codigolivre.org.br                 |
 +-------------------------------------------------------------------+
 (./monografia.aux (./introducao.aux) (./sistemamecanico.aux) (./sensores.aux)
-(./visao.aux) (./navegacao.aux) (./conclusao.aux) (./cadernodebordo.aux)) ) 
+(./visao.aux) (./navegacao.aux) (./conclusao.aux) (./cadernodebordo.aux)
+(./descritivo.aux)) ) 
 Here is how much of TeX's memory you used:
- 4294 strings out of 493633
- 58284 string characters out of 3148831
- 133420 words of memory out of 3000000
- 7361 multiletter control sequences out of 15000+200000
- 45254 words of font info for 99 fonts, out of 3000000 for 9000
+ 4314 strings out of 493633
+ 58554 string characters out of 3148831
+ 132727 words of memory out of 3000000
+ 7367 multiletter control sequences out of 15000+200000
+ 47884 words of font info for 105 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 37i,11n,43p,1014b,318s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/us
-r/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/urw/times/u
-tmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/
-texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/
-urw/times/utmri8a.pfb>
-Output written on monografia.pdf (32 pages, 247906 bytes).
+ 37i,11n,43p,1014b,369s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/s
+hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/
+urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><
+/usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/f
+onts/type1/urw/times/utmri8a.pfb>
+Output written on monografia.pdf (36 pages, 1454799 bytes).
 PDF statistics:
- 133 PDF objects out of 1000 (max. 8388607)
- 88 compressed objects within 1 object stream
+ 150 PDF objects out of 1000 (max. 8388607)
+ 99 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
